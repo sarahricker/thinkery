@@ -27,8 +27,8 @@ $genesis_sample_link_color_contrast   = genesis_sample_color_contrast( $genesis_
 $genesis_sample_link_color_brightness = genesis_sample_color_brightness( $genesis_sample_link_color, 35 );
 
 return [
-	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
-	'content-width'        => 1062,
+	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">',
+	'content-width'        => 1100,
 	'button-bg'            => $genesis_sample_link_color,
 	'button-color'         => $genesis_sample_link_color_contrast,
 	'button-outline-hover' => $genesis_sample_link_color_brightness,
@@ -49,22 +49,22 @@ return [
 	'editor-font-sizes'    => [
 		[
 			'name' => __( 'Small', 'genesis-sample' ),
-			'size' => 12,
+			'size' => 14,
 			'slug' => 'small',
 		],
 		[
 			'name' => __( 'Normal', 'genesis-sample' ),
-			'size' => 18,
+			'size' => 16,
 			'slug' => 'normal',
 		],
 		[
 			'name' => __( 'Large', 'genesis-sample' ),
-			'size' => 20,
+			'size' => 18,
 			'slug' => 'large',
 		],
 		[
 			'name' => __( 'Larger', 'genesis-sample' ),
-			'size' => 24,
+			'size' => 21,
 			'slug' => 'larger',
 		],
 	],
