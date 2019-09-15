@@ -1,4 +1,9 @@
-# Updated version of the older WP Engine recommended gitignore file.
+# This file lists which files should not be pushed by WPE DevKit. Feel free to
+# add, remove, or comment lines to change the sync behavior, but note that this
+# file will be recreated with the default values if it is missing. There are a
+# few additional files, including wp-config.php, which are ignored no matter
+# what as synchronizing these files would almost certainly result in an unusable
+# install.
 
 # Temporary and OS files
 *~
@@ -6,19 +11,19 @@
 *.swp
 Thumbs.db
 
-.htaccess
-
 # Version Control files
 *.bak
 .svn
 .cvs
+#.git
 
 # WordPress specific files
 # NOTE:
 #   WP Engine automatically updates part or all of WordPress under certain
-#   circumstances, so generally it is desirable to not version control copies of
-#   the. However, in case you do have some specific need to version control
-#   these files, you can comment out these lines.
+#   circumstances, so generally it is desirable to not push local copies of the
+#   WordPress files to a production server. However, in case you do have some
+#   specific need to push local changes to production, you can comment out these
+#   lines.
 wp-config.php
 wp-content/uploads/
 wp-content/blogs.dir/
@@ -28,43 +33,6 @@ wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
-
-# wp core (as of 3.4.1)
-/db-config.php
-/index.php
-/license.txt
-/readme.html
-/wp-activate.php
-/wp-app.php
-/wp-atom.php
-/wp-blog-header.php
-/wp-comments-post.php
-/wp-commentsrss2.php
-/wp-config-sample.php
-/wp-cron.php
-/wp-feed.php
-/wp-links-opml.php
-/wp-load.php
-/wp-login.php
-/wp-mail.php
-/wp-rdf.php
-/wp-rss.php
-/wp-rss2.php
-/wp-pass.php
-/wp-register.php
-/wp-settings.php
-/wp-signup.php
-/wp-trackback.php
-/xmlrpc.php
-/wp-admin
-/wp-includes
-/wp-content/index.php
-/wp-content/themes/index.php
-/wp-content/plugins/index.php
-
-wp-content/plugins/
-wp-content/themes/twenty*
-wp-content/themes/genesis
 
 # WP Engine specific files
 # NOTE:
@@ -84,11 +52,6 @@ wp-content/themes/genesis
 /wp-content/mu-plugins/wpengine-excerpt*
 /wp-content/plugins/wpengine-snapshot/snapshots
 /wp-content/mysql.sql
-/.wpe-devkit
-
-/wp-content/mu-plugins/wpengine-security-auditor.php
-.wpengine-conf/nginx-forward-images-back.conf
-.wpengine-conf/wp-config-site.php
 
 # Some other files which may be desirable to skip under certain circumstances
 #.listing
@@ -121,41 +84,3 @@ wp-content/themes/genesis
 #*.zip
 #*.tar
 #*.tgz
-
-# Large and binary files
-# NOTE:
-#   It is generally considered bad practice to version control binary asset
-#   files in the same repo as text code, but you can attempt to proceed anyway
-#   by commenting out these lines.
-*.hqx
-*.bin
-*.exe
-*.dll
-*.deb
-*.dmg
-*.iso
-*.img
-*.msi
-*.msp
-*.msm
-*.mid
-*.midi
-*.kar
-*.mp3
-*.ogg
-*.m4a
-*.ra
-*.3gpp
-*.3gp
-*.mp4
-*.mpeg
-*.mpg
-*.mov
-*.webm
-*.flv
-*.m4v
-*.mng
-*.asx
-*.asf
-*.wmv
-*.avi
