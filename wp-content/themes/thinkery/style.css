@@ -156,7 +156,7 @@ html {
 body {
 	background-color: #fff;
 	color: #333;
-	font-family: "Open Sans", sans-serif;
+	font-family: museo-sans, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
@@ -240,7 +240,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Open Sans", sans-serif;
+	font-family: museo-sans, sans-serif;
 	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 20px;
