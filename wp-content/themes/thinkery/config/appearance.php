@@ -58,14 +58,24 @@ return [
 			'slug' => 'normal',
 		],
 		[
-			'name' => __( 'Large', 'genesis-sample' ),
+			'name' => __( 'Medium', 'genesis-sample' ),
 			'size' => 18,
+			'slug' => 'medium',
+		],
+		[
+			'name' => __( 'Large', 'genesis-sample' ),
+			'size' => 28,
 			'slug' => 'large',
 		],
 		[
 			'name' => __( 'Larger', 'genesis-sample' ),
-			'size' => 21,
+			'size' => 40,
 			'slug' => 'larger',
+		],
+		[
+			'name' => __( 'Largest', 'genesis-sample' ),
+			'size' => 48,
+			'slug' => 'largest',
 		],
 	],
 ];
