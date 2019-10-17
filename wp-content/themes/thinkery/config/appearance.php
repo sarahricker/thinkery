@@ -10,12 +10,18 @@
 
 $genesis_sample_default_colors = [
 	'link'   => '#0073e5',
+	'primary'   => '#1b2432',
 	'accent' => '#0073e5',
 ];
 
 $genesis_sample_link_color = get_theme_mod(
 	'genesis_sample_link_color',
 	$genesis_sample_default_colors['link']
+);
+
+$genesis_sample_primary_color = get_theme_mod(
+	'genesis_sample_primary_color',
+	$genesis_sample_default_colors['primary']
 );
 
 $genesis_sample_accent_color = get_theme_mod(
@@ -39,6 +45,11 @@ return [
 			'name'  => __( 'Custom color', 'genesis-sample' ), // Called “Link Color” in the Customizer options. Renamed because “Link Color” implies it can only be used for links.
 			'slug'  => 'theme-primary',
 			'color' => $genesis_sample_link_color,
+		],
+		[
+			'name'  => __( 'Primary color', 'genesis-sample' ),
+			'slug'  => 'theme-primary',
+			'color' => $genesis_sample_primary_color,
 		],
 		[
 			'name'  => __( 'Accent color', 'genesis-sample' ),
