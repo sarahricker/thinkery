@@ -692,12 +692,12 @@ th:last-child {
 .author-box-title {
 	font-size: 20px;
 	font-weight: 600;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .entry-title {
-	font-size: 30px;
-	margin-bottom: 10px;
+	font-size: 65px;
+	margin-bottom: 20px;
 }
 
 .entry-title a,
