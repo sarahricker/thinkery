@@ -35,6 +35,7 @@ $genesis_sample_link_color_brightness = genesis_sample_color_brightness( $genesi
 return [
 	'fonts-url'            => 'https://use.typekit.net/kkn7rhy.css',
 	'content-width'        => 1100,
+	'site-header-bg'       => $genesis_sample_link_color,
 	'button-bg'            => $genesis_sample_link_color,
 	'button-color'         => $genesis_sample_link_color_contrast,
 	'button-outline-hover' => $genesis_sample_link_color_brightness,
