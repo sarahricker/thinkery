@@ -1248,25 +1248,51 @@ img.alignright,
 .entry-content ol,
 .entry-content ul {
 	margin-bottom: 30px;
-	padding-left: 40px;
+	padding-left: 20px;
+	list-style: none;
 }
 
-.entry-content ol > li {
-	list-style-type: decimal;
+.entry-content ol {
+	counter-reset: counter;
 }
-
-.entry-content ul > li {
-	list-style-type: disc;
+.entry-content ol li {
+	counter-increment: counter;
 }
-
+.entry-content ol li::before {
+	content: counter(counter) ". ";
+	color: #db3e3d;
+	font-weight: bold;
+}
+.entry-content ol ol li::before {
+	content: counters(counter, ".") " ";
+}
+.entry-content ul li:before {
+	color: #db3e3d;
+	content: "\2022";
+	font-weight: bold;
+	display: inline-block;
+	padding-right: 10px;
+}
+.entry-content ul ul > li:before {
+	content: "\26AC";
+}
 .entry-content ol ul > li,
 .entry-content ul ul > li {
-	list-style-type: circle;
+	list-style-type: none;
 }
 
 .entry-content ol ol,
 .entry-content ul ul {
 	margin-bottom: 0;
+}
+
+.entry-content ol.is-style-none,
+.entry-content ul.is-style-none {
+	padding-left: 20px !important; /* important overrides co-blocks important... */
+}
+.entry-content ol.is-style-none li:before,
+.entry-content ul.is-style-none li:before {
+	display: none;
 }
 
 .entry-content code {

@@ -303,6 +303,59 @@ p.has-background.light-text a:hover {
 	margin-bottom: 0;
 }
 
+.editor-block-list__block ol,
+.editor-block-list__block ol.is-style-default,
+.editor-block-list__block ul,
+.editor-block-list__block ul.is-style-default {
+	list-style: none;
+	padding-left: 20px;
+	margin-left: 0;
+}
+
+.editor-block-list__block ol,
+.editor-block-list__block ol.is-style-default {
+	counter-reset: counter;
+}
+.editor-block-list__block ol li,
+.editor-block-list__block ol.is-style-default li {
+	counter-increment: counter;
+}
+.editor-block-list__block ol li::before,
+.editor-block-list__block ol.is-style-default li::before {
+	content: counter(counter) ". ";
+	color: #db3e3d;
+	font-weight: bold;
+}
+
+.editor-block-list__block ol ol li::before,
+.editor-block-list__block ol.is-style-default ol li::before {
+	content: counters(counter, ".") " ";
+}
+
+.editor-block-list__block ul li:before,
+.editor-block-list__block ul.is-style-default li:before {
+	color: #db3e3d;
+	content: "\2022";
+	font-weight: bold;
+	display: inline-block;
+	padding-right: 10px;
+}
+.editor-block-list__block ul ul > li:before,
+.editor-block-list__block ul.is-style-default ul > li:before {
+	content: "\26AC";
+}
+.editor-block-list__block ol ul > li,
+.editor-block-list__block ol.is-style-default ul > li,
+.editor-block-list__block ul ul > li,
+.editor-block-list__block ul.is-style-default ul > li {
+	list-style-type: none;
+}
+
+.editor-block-list__block ol.is-style-none li:before,
+.editor-block-list__block ul.is-style-none li:before {
+	display: none;
+}
+
 /* Preformatted elements
 ---------------------------------------------------------------------------- */
 
