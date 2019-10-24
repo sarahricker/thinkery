@@ -421,18 +421,18 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #db3e3d;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0;
 	color: #fff;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
-	width: auto;
+	width: 233px;
 }
 
 button:focus,
@@ -452,6 +452,7 @@ input[type="submit"]:hover,
 	background-color: #0073e5;
 	border-width: 0;
 	color: #fff;
+	box-shadow: inset 0 0 200px rgba(230, 230, 230, 0.25);
 }
 
 .entry-content .button:focus,

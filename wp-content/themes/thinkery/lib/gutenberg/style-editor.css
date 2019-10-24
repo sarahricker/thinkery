@@ -358,16 +358,17 @@ hr.wp-block-separator.is-style-dots {
 
 .wp-block-button .wp-block-button__link {
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: museo-sans, sans-serif;
 	font-weight: 600;
 	line-height: 24px;
-	padding: 15px 30px;
+	padding: 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
+	width: 233px;
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {
@@ -378,7 +379,8 @@ hr.wp-block-separator.is-style-dots {
 	background-color: transparent;
 	border: 2px solid currentColor;
 	border-radius: 0;
-	padding: 13px 28px;
+	padding: 20px;
+	width: 233px;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
