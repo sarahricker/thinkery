@@ -155,7 +155,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #333;
+	color: #1b2432;
 	font-family: museo-sans, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -183,7 +183,7 @@ a {
 
 a:focus,
 a:hover {
-	color: #333;
+	color: #1b2432;
 	text-decoration: none;
 }
 
@@ -224,7 +224,7 @@ i {
 
 mark {
 	background: #ddd;
-	color: #333;
+	color: #1b2432;
 }
 
 blockquote {
@@ -241,7 +241,7 @@ h4,
 h5,
 h6 {
 	font-family: museo-sans, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.2;
 	margin: 0 0 20px;
 }
@@ -380,7 +380,7 @@ select,
 textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
-	color: #333;
+	color: #1b2432;
 	font-size: 18px;
 	font-weight: 400;
 	padding: 15px;
@@ -400,17 +400,17 @@ input[type="radio"] {
 }
 
 ::-ms-input-placeholder {
-	color: #333;
+	color: #1b2432;
 	opacity: 1;
 }
 
 :-ms-input-placeholder {
-	color: #333;
+	color: #1b2432;
 	opacity: 1;
 }
 
 ::placeholder {
-	color: #333;
+	color: #1b2432;
 	opacity: 1;
 }
 
@@ -421,18 +421,18 @@ input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form input[type="submit"],
 .site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #db3e3d;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0;
 	color: #fff;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 600;
-	padding: 15px 30px;
+	padding: 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
-	width: auto;
+	width: 233px;
 }
 
 button:focus,
@@ -452,6 +452,7 @@ input[type="submit"]:hover,
 	background-color: #0073e5;
 	border-width: 0;
 	color: #fff;
+	box-shadow: inset 0 0 200px rgba(230, 230, 230, 0.25);
 }
 
 .entry-content .button:focus,
@@ -547,7 +548,7 @@ th:last-child {
 	background: #fff;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #333;
+	color: #1b2432;
 	display: block;
 	font-size: 1em;
 	font-weight: 700;
@@ -691,17 +692,17 @@ th:last-child {
 .author-box-title {
 	font-size: 20px;
 	font-weight: 600;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .entry-title {
-	font-size: 30px;
-	margin-bottom: 10px;
+	font-size: 65px;
+	margin-bottom: 20px;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
+	color: #1b2432;
 	text-decoration: none;
 }
 
@@ -892,7 +893,7 @@ img.alignright,
 .gs-faq__question {
 	background: transparent;
 	border-bottom: 1px solid #eee;
-	color: #333;
+	color: #1b2432;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -984,7 +985,7 @@ img.alignright,
 
 /* Display outline on focus */
 :focus {
-	color: #333;
+	color: #1b2432;
 	outline: #ccc solid 1px;
 }
 
@@ -993,9 +994,18 @@ img.alignright,
 ---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
+	background-color: #db3e3d;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 0 30px;
+}
+.site-header .wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.search-form-input, .search-form-submit {
+	display: inline-block;
+	width: auto;
 }
 
 /* Title Area
@@ -1025,11 +1035,14 @@ img.alignright,
 	margin-bottom: 0;
 }
 
-.site-title a,
+.site-title a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
-	text-decoration: none;
+	color: #1b2432;
 }
 
 .site-description,
@@ -1060,10 +1073,11 @@ img.alignright,
 }
 
 .genesis-nav-menu a {
-	color: #333;
+	color: #ffffff;
 	display: block;
-	font-size: 15px;
-	font-weight: 400;
+	font-size: 16px;
+	font-family: museo-sans, sans-serif;
+    font-weight: 600;
 	outline-offset: -1px;
 	padding-bottom: 12px;
 	padding-top: 12px;
@@ -1075,13 +1089,24 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+	color: #1b2432;
 	text-decoration: none;
 }
 
 .genesis-nav-menu .sub-menu,
 .genesis-nav-menu .sub-menu a {
 	width: 100%;
+	color: #db3e3d;
+}
+
+.genesis-nav-menu .sub-menu a:focus,
+.genesis-nav-menu .sub-menu a:hover {
+	color: #1b2432;
+}
+
+.genesis-nav-menu .current-menu-ancestor > a,
+.genesis-nav-menu .current-menu-ancestor .sub-menu .current-menu-item > a {
+	color: #1b2432;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -1139,7 +1164,7 @@ img.alignright,
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: #333;
+	color: #1b2432;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1247,25 +1272,51 @@ img.alignright,
 .entry-content ol,
 .entry-content ul {
 	margin-bottom: 30px;
-	padding-left: 40px;
+	padding-left: 20px;
+	list-style: none;
 }
 
-.entry-content ol > li {
-	list-style-type: decimal;
+.entry-content ol {
+	counter-reset: counter;
 }
-
-.entry-content ul > li {
-	list-style-type: disc;
+.entry-content ol li {
+	counter-increment: counter;
 }
-
+.entry-content ol li::before {
+	content: counter(counter) ". ";
+	color: #db3e3d;
+	font-weight: bold;
+}
+.entry-content ol ol li::before {
+	content: counters(counter, ".") " ";
+}
+.entry-content ul li:before {
+	color: #db3e3d;
+	content: "\2022";
+	font-weight: bold;
+	display: inline-block;
+	padding-right: 10px;
+}
+.entry-content ul ul > li:before {
+	content: "\26AC";
+}
 .entry-content ol ul > li,
 .entry-content ul ul > li {
-	list-style-type: circle;
+	list-style-type: none;
 }
 
 .entry-content ol ol,
 .entry-content ul ul {
 	margin-bottom: 0;
+}
+
+.entry-content ol.is-style-none,
+.entry-content ul.is-style-none {
+	padding-left: 20px !important; /* important overrides co-blocks important... */
+}
+.entry-content ol.is-style-none li:before,
+.entry-content ul.is-style-none li:before {
+	display: none;
 }
 
 .entry-content code {
@@ -1322,7 +1373,7 @@ p.entry-meta {
 
 .archive-pagination li a {
 	background-color: #f5f5f5;
-	color: #333;
+	color: #1b2432;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -1335,7 +1386,7 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #333;
+	background-color: #1b2432;
 	color: #fff;
 }
 
@@ -1497,7 +1548,7 @@ p.entry-meta {
 	}
 
 	.genesis-nav-menu > .menu-highlight > a {
-		background-color: #333;
+		background-color: #1b2432;
 		border-radius: 3px;
 		color: #fff;
 		font-weight: 600;
@@ -1713,7 +1764,7 @@ p.entry-meta {
 	*::after {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #333 !important;
+		color: #1b2432 !important;
 		text-shadow: none !important;
 	}
 

@@ -1,5 +1,5 @@
 body {
-	color: #333;
+	color: #1b2432;
 	font-family: museo-sans, sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -74,7 +74,7 @@ a {
 
 a:focus,
 a:hover {
-	color: #333;
+	color: #1b2432;
 	text-decoration: none;
 }
 
@@ -85,7 +85,7 @@ h4,
 h5,
 h6 {
 	font-family: museo-sans, sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	line-height: 1.2;
 	margin: 0 0 20px;
 }
@@ -220,7 +220,7 @@ p.has-background.light-text a:hover {
 }
 
 .wp-block-pullquote.is-style-solid-color {
-	background-color: #333;
+	background-color: #1b2432;
 }
 
 
@@ -303,6 +303,59 @@ p.has-background.light-text a:hover {
 	margin-bottom: 0;
 }
 
+.editor-block-list__block ol,
+.editor-block-list__block ol.is-style-default,
+.editor-block-list__block ul,
+.editor-block-list__block ul.is-style-default {
+	list-style: none;
+	padding-left: 20px;
+	margin-left: 0;
+}
+
+.editor-block-list__block ol,
+.editor-block-list__block ol.is-style-default {
+	counter-reset: counter;
+}
+.editor-block-list__block ol li,
+.editor-block-list__block ol.is-style-default li {
+	counter-increment: counter;
+}
+.editor-block-list__block ol li::before,
+.editor-block-list__block ol.is-style-default li::before {
+	content: counter(counter) ". ";
+	color: #db3e3d;
+	font-weight: bold;
+}
+
+.editor-block-list__block ol ol li::before,
+.editor-block-list__block ol.is-style-default ol li::before {
+	content: counters(counter, ".") " ";
+}
+
+.editor-block-list__block ul li:before,
+.editor-block-list__block ul.is-style-default li:before {
+	color: #db3e3d;
+	content: "\2022";
+	font-weight: bold;
+	display: inline-block;
+	padding-right: 10px;
+}
+.editor-block-list__block ul ul > li:before,
+.editor-block-list__block ul.is-style-default ul > li:before {
+	content: "\26AC";
+}
+.editor-block-list__block ol ul > li,
+.editor-block-list__block ol.is-style-default ul > li,
+.editor-block-list__block ul ul > li,
+.editor-block-list__block ul.is-style-default ul > li {
+	list-style-type: none;
+}
+
+.editor-block-list__block ol.is-style-none li:before,
+.editor-block-list__block ul.is-style-none li:before {
+	display: none;
+}
+
 /* Preformatted elements
 ---------------------------------------------------------------------------- */
 
@@ -358,16 +411,17 @@ hr.wp-block-separator.is-style-dots {
 
 .wp-block-button .wp-block-button__link {
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: museo-sans, sans-serif;
 	font-weight: 600;
 	line-height: 24px;
-	padding: 15px 30px;
+	padding: 20px;
 	text-align: center;
 	text-decoration: none;
 	white-space: normal;
+	width: 233px;
 }
 
 .wp-block-button.is-style-squared .wp-block-button__link {
@@ -378,7 +432,8 @@ hr.wp-block-separator.is-style-dots {
 	background-color: transparent;
 	border: 2px solid currentColor;
 	border-radius: 0;
-	padding: 13px 28px;
+	padding: 20px;
+	width: 233px;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:focus,
