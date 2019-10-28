@@ -22,7 +22,9 @@ function genesis_sample_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$color_link   = get_theme_mod( 'genesis_sample_link_color', $appearance['default-colors']['link'] );
+	$color_primary = get_theme_mod( 'genesis_sample_primary_color', $appearance['default-colors']['primary'] );
 	$color_accent = get_theme_mod( 'genesis_sample_accent_color', $appearance['default-colors']['accent'] );
+
 	$logo         = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
 	if ( $logo ) {
@@ -42,11 +44,6 @@ function genesis_sample_css() {
 		a,
 		.entry-title a:focus,
 		.entry-title a:hover,
-		.genesis-nav-menu a:focus,
-		.genesis-nav-menu a:hover,
-		.genesis-nav-menu .current-menu-item > a,
-		.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-		.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
 		.menu-toggle:focus,
 		.menu-toggle:hover,
 		.sub-menu-toggle:focus,
@@ -57,6 +54,18 @@ function genesis_sample_css() {
 		',
 		$color_link
 	) : '';
+
+	$css .= ( $appearance['default-colors']['primary'] !== $color_primary ) ? sprintf(
+		'
+
+		body {
+			color: %1$s;
+		}
+		',
+		$color_primary,
+		genesis_sample_color_contrast( $color_primary )
+	) : '';
+
 
 	$css .= ( $appearance['default-colors']['accent'] !== $color_accent ) ? sprintf(
 		'

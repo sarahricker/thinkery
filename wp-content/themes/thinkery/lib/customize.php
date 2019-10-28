@@ -44,6 +44,27 @@ function genesis_sample_customizer_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
+		'genesis_sample_primary_color',
+		[
+			'default'           => $appearance['default-colors']['primary'],
+			'sanitize_callback' => 'sanitize_hex_color',
+		]
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_sample_primary_color',
+			[
+				'description' => __( 'Change the default primary color for text.', 'genesis-sample' ),
+				'label'       => __( 'Primary Color', 'genesis-sample' ),
+				'section'     => 'colors',
+				'settings'    => 'genesis_sample_primary_color',
+			]
+		)
+	);
+
+	$wp_customize->add_setting(
 		'genesis_sample_accent_color',
 		[
 			'default'           => $appearance['default-colors']['accent'],

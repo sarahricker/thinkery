@@ -19,6 +19,10 @@ function genesis_sample_custom_gutenberg_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$css = <<<CSS
+.site-header {
+	background-color: {$appearance['site-header-bg']};
+}
+
 .ab-block-post-grid .ab-post-grid-items h2 a:hover {
 	color: {$appearance['link-color']};
 }

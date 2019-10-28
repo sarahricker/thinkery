@@ -49,7 +49,8 @@ function genesis_sample_woocommerce_css() {
 
 	$appearance = genesis_get_config( 'appearance' );
 
-	$color_link   = get_theme_mod( 'genesis_sample_link_color', $appearance['default-colors']['link'] );
+	$color_link   = get_theme_mod( 'genesis_sample_primary_color', $appearance['default-colors']['link'] );
+	$color_primary = get_theme_mod( 'genesis_sample_accent_color', $appearance['default-colors']['primary'] );
 	$color_accent = get_theme_mod( 'genesis_sample_accent_color', $appearance['default-colors']['accent'] );
 
 	$woo_css = '';
