@@ -175,26 +175,29 @@ function genesis_sample_secondary_menu_args( $args ) {
 /**
  * Add search form to site header
  */
-add_action( 'genesis_header', 'wpem_search', 13 );
+add_action( 'genesis_header', 'thinkery_search', 13 );
 
 /**
  * Render search form.
  */
-function wpem_search() {
+function thinkery_search() {
+	if ( is_page_template( 'page-templates/landing.php' ) ) {
+		return false;
+	}
 	get_search_form();
 }
 /**
  * Customize search form input box text
  */
-add_filter( 'genesis_search_text', 'wpem_search_input_text' );
+add_filter( 'genesis_search_text', 'thinkery_search_input_text' );
 /**
  * Render search input text.
  *
  * @param string $text   Search input text.
  * @return string        Search input text.
  */
-function wpem_search_input_text( $text ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter
-	return esc_attr( 'Search' );
+function thinkery_search_input_text( $text ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter
+	return esc_attr( 'search' );
 }
 
 add_filter( 'genesis_author_box_gravatar_size', 'genesis_sample_author_box_gravatar' );
