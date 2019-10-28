@@ -671,7 +671,7 @@ th:last-child {
 
 .post-password-form input[type="submit"],
 .search-form input[type="submit"] {
-	margin-top: 10px;
+	margin-top: 0px;
 }
 
 .widget_search input[type="submit"] {
