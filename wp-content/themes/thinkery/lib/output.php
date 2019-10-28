@@ -148,15 +148,6 @@ function genesis_sample_css() {
 		'
 	: '';
 
-	$css .= ( has_custom_logo() && $logo_padding && ( 1 < $logo_effective_height ) ) ? sprintf(
-		'
-		.wp-custom-logo .title-area {
-			padding-top: %spx;
-		}
-		',
-		$logo_padding + 5
-	) : '';
-
 	if ( $css ) {
 		wp_add_inline_style( genesis_get_theme_handle(), $css );
 	}
