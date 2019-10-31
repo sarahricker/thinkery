@@ -1502,7 +1502,7 @@ font-size: 1.2em;
 }
 
 .footer-widgets a:hover,
-.footer-widgets a:focus, {
+.footer-widgets a:focus {
     color: #1b2432;
 }
 
