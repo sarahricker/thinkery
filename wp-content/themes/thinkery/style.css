@@ -671,7 +671,7 @@ th:last-child {
 
 .post-password-form input[type="submit"],
 .search-form input[type="submit"] {
-	margin-top: 10px;
+	margin-top: 0px;
 }
 
 .widget_search input[type="submit"] {
@@ -1007,6 +1007,33 @@ img.alignright,
 	display: inline-block;
 	width: auto;
 }
+.site-header .search-form {
+	display: none;
+}
+.site-header .search-form-input[type="search"] {
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid #ffffff;
+	padding: 5px 0px;
+	text-transform: lowercase;
+	color: #ffffff;
+}
+.site-header .search-form-input[type="search"]::placeholder {
+	color: #ffffff;
+}
+.site-header .search-form-input[type="search"]::-webkit-input-placeholder { /* Edge */
+	color: #ffffff;
+}
+.site-header .search-form-input[type="search"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #ffffff;
+}
+.site-header .search-form-submit:hover,
+.site-header .search-form-submit:focus {
+	box-shadow: none;
+	outline: transparent;
+	color: #1b2432;
+}
+
 
 /* Title Area
 --------------------------------------------- */
@@ -1019,8 +1046,7 @@ img.alignright,
 
 .wp-custom-logo .title-area {
 	max-width: 350px;
-	padding-bottom: 5px;
-	padding-top: 5px;
+	padding: 24px 0;
 	width: 100%;
 }
 
@@ -1562,6 +1588,10 @@ font-size: 1.2em;
 
 	.admin-bar .site-header {
 		top: 32px;
+	}
+
+	.site-header .search-form {
+		display: block;
 	}
 
 	/* Genesis Menu
