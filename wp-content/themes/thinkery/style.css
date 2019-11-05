@@ -162,6 +162,8 @@ body {
 	line-height: 1.625;
 	margin: 0;
 	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
 }
 
 button,
@@ -1056,7 +1058,8 @@ img.alignright,
 	font-size: 20px;
 	text-align: right;
 	margin: 0;
-	width: 100%;
+	width: auto;
+	float: right;
 }
 .menu-toggle i {
 	padding-left: 5px;
@@ -1215,7 +1218,7 @@ img.alignright,
 .sub-menu-toggle:hover {
 	background-color: transparent;
 	border-width: 0;
-	color: #ffffff;
+	color: #1b2432;
 	box-shadow: none;
 }
 
@@ -1263,12 +1266,40 @@ img.alignright,
 	transform: rotate(180deg);
 }
 
-/* Mobile slide out menu */
+/* Mobile slide out menu
+--------------------------------------------- */
+.slideout-open,
+.slideout-open body,
+.slideout-open .side-menu {
+	overflow: scroll;
+}
+.slideout-open .side-menu {
+	display: block;
+}
+.site-container {
+	min-height: 100%;
+	min-width: 100%;
+	background-color: #fff;
+	position: relative;
+	top: 0;
+	bottom: 100%;
+	left: 0;
+	z-index: 1;
+}
 .side-menu {
+	display: none;
+	min-height: 100vh;
+	min-width: 100vw;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
 	background: #db3e3d;
 }
 .side-menu .wrap {
-	padding: 30px;
+	padding: 15px 30px;
 }
 .side-menu-header {
 	display: flex;
@@ -1286,6 +1317,16 @@ img.alignright,
 	font-size: 20px;
 	text-align: right;
 	padding: 0;
+	width: auto;
+}
+.side-menu .close-icon i {
+	padding-right: 5px;
+	font-size: 20px;
+}
+.side-menu .close-icon:hover,
+.side-menu .close-icon:focus {
+	color: #1b2432;
+	box-shadow: none;
 }
 .side-menu .menu-header-menu-container {
 	padding: 20px;
@@ -1302,7 +1343,10 @@ img.alignright,
 	padding: 20px;
 	display: block;
 }
-
+.side-menu ul.menu li a:hover,
+.side-menu ul.menu li a:focus {
+	color: #1b2432;
+}
 .side-menu .search-form {
 	margin: 0 auto;
 	text-align: center;
@@ -1311,51 +1355,6 @@ img.alignright,
 	width: calc(100% - 58px);
 	max-width: 200px;
 }
-
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .side-menu {
-	overflow: scroll;
-}
-body {
-  width: 100%;
-  height: 100%;
-}
-
-.side-menu {
-	min-height: 100vh;
-	min-width: 100vw;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-	display: none;
-}
-
-.site-container {
-	min-height: 100%;
-	min-width: 100%;
-	background-color: #ffffff; /* Needs a background or else the nav will show through*/
-	position: relative;
-	top: 0;
-	bottom: 100%;
-	left: 0;
-	z-index: 0;
-}
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .site-container {
-  overflow: hidden;
-}
-
-.slideout-open .side-menu {
-  display: block;
-}
-
 
 /* Header Menu
 --------------------------------------------- */

@@ -235,8 +235,8 @@ function thinkery_custom_side_menu() { ?>
 				<div class="logo">
 					<a href="/sites/"><img src="<?php echo esc_url( CHILD_URL . '/images/logo-thinkery-bug.png' ); ?>" alt="Thinkery" /></a>
 				</div>
-				<button class="close-icon dashicons-before dashicons-no-alt">
-					Close
+				<button class="close-icon">
+					<i class="fas fa-times"></i> Close
 				</button>
 			</div>
 			<?php
