@@ -261,10 +261,13 @@ add_filter( 'wp_nav_menu_args', 'thinkery_limit_mobile_menu_depth' );
  * Reduce the primary navigation menu to one level depth
  */
 function thinkery_limit_mobile_menu_depth( $args ){
-	$args['depth'] = 1;
-	if( 'primary' != $args['mobile'] ) {
-		return $args;
+
+	$args['depth'] = 2;
+
+	if( 'mobile' == $args['theme_location'] ) {
+		$args['depth'] = 1;
 	}
+
 	return $args;
 }
 
