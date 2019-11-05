@@ -255,6 +255,19 @@ function thinkery_custom_side_menu() { ?>
 	<?php
 }
 
+
+add_filter( 'wp_nav_menu_args', 'thinkery_limit_mobile_menu_depth' );
+/**
+ * Reduce the primary navigation menu to one level depth
+ */
+function thinkery_limit_mobile_menu_depth( $args ){
+	$args['depth'] = 1;
+	if( 'primary' != $args['mobile'] ) {
+		return $args;
+	}
+	return $args;
+}
+
 /**
  * Add custom menu toggle.
  */
