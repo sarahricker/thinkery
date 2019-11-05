@@ -1176,6 +1176,12 @@ img.alignright,
 	display: block;
 	left: auto;
 	opacity: 1;
+	border-top: none;
+	padding-top: 25px;
+}
+
+.genesis-nav-menu .menu-item:hover > .sub-menu li:first-child {
+	border-top: 5px solid #AF3030;
 }
 
 /* Responsive Menu
