@@ -36,12 +36,13 @@ jQuery(function ($) {
 	 * close the slideout menu since we no longer have a mobile menu option.
 	 */
 
-	if ( slideout.isOpen() ) {
-		if ( 768 <= window.innerWidth ) {
-			slideout.close();
-		} else {
-			slideout.open();
+	$( window ).resize(function() {
+		if ( slideout.isOpen() ) {
+			if ( 960 <= window.innerWidth ) {
+				slideout.close();
+			} else {
+				slideout.open();
+			}
 		}
-	}
-
+	});
 });
