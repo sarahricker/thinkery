@@ -43,11 +43,7 @@ function genesis_sample_css() {
 
 		a,
 		.entry-title a:focus,
-		.entry-title a:hover,
-		.menu-toggle:focus,
-		.menu-toggle:hover,
-		.sub-menu-toggle:focus,
-		.sub-menu-toggle:hover {
+		.entry-title a:hover {
 			color: %s;
 		}
 
