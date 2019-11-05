@@ -1,15 +1,15 @@
 jQuery(function ($) {
 
+	/**
+	 * Slideout Mobiile Navigation
+	 */
+
 	var slideout = new Slideout({
 		'panel': document.getElementById('site-container'),
 		'menu': document.getElementById('slideout-menu'),
 		padding: 1100,
 		tolerance: 70,
 	});
-
-	/**
-	 * Toggle button
-	 */
 
 	// Toggle Slideout Nav (to open)
 	document.querySelector( '.menu-toggle' ).addEventListener(
