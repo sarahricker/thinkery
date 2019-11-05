@@ -34,6 +34,6 @@ return [
 	'genesis-footer-widgets'          => 5,
 	'genesis-menus'                   => [
 		'primary'   => __( 'Header Menu', 'genesis-sample' ),
-		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
+		'mobile' => __( 'Mobile Menu', 'genesis-sample' ),
 	],
 ];
