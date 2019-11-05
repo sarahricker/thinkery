@@ -1342,9 +1342,12 @@ img.alignright,
 	margin-bottom: 0;
 	text-align: center;
 }
+.side-menu ul.menu li:last-child {
+	border: none;
+}
 .side-menu ul.menu li a {
 	color: #ffffff;
-	font-size: 21px;
+	font-weight: 600;
 	text-decoration: none;
 	padding: 20px;
 	display: block;
@@ -1354,12 +1357,17 @@ img.alignright,
 	color: #1b2432;
 }
 .side-menu .search-form {
-	margin: 0 auto;
+	margin: 20px auto;
 	text-align: center;
 }
 .side-menu .search-form-input {
-	width: calc(100% - 58px);
+	width: calc(100% - 60px);
 	max-width: 200px;
+	margin-left: 60px;
+	margin-right: -60px;
+}
+.side-menu .search-form-submit {
+	padding: 17px 21px;
 }
 
 /* Header Menu
