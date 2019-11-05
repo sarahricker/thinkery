@@ -1714,11 +1714,61 @@ font-size: 1.2em;
 		z-index: 9999;
 	}
 
+	.header-widget-area {
+		display: none;
+	}
+
 	.site-header .search-form {
 		display: block;
 	}
-	.header-widget-area {
-		display: none;
+
+	.site-header .search-form {
+		width: 40px;
+		height: 40px;
+		background-color: transparent;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.5s ease;
+	}
+
+	.site-header .search-form.active {
+		width: 220px;
+	}
+	.site-header .search-form.active:before {
+		content: '';
+		width: 1px;
+		height: 20px;
+		position: absolute;
+		bottom: 10px;
+		background-color: #ffffff;
+		transition: all 0.5s ease;
+	}
+
+	.site-header .search-form-input[type="search"] {
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
+		border-bottom: 2px solid #ffffff;
+		background: transparent;
+		color: #fff;
+		padding: 20px 20px 20px 20px;
+	}
+	.site-header .search-form-input[type="search"] {
+		outline: none;
+	}
+	.site-header .search-form-submit:hover,
+	.site-header .search-form-submit:focus {
+		color: #ffffff;
+	}
+	.site-header .search-form-submit {
+		width: 40px;
+		height: 40px;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 0px;
+		cursor: pointer;
 	}
 
 	/* Genesis Menu

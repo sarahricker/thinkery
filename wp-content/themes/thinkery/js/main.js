@@ -1,6 +1,17 @@
 jQuery(function ($) {
 
 	/**
+	 * Slideout Search Bar in Header
+	 */
+	$( ".search-form-submit" ).on( 'click focus', function ( e ) {
+		$( this ).parent().addClass( 'active' ).find( 'input[type="search"]' ).focus();
+
+		if( $(this).parent().find( 'input[type="search"]' ).val() == '' ) {
+			e.preventDefault();
+		}
+	} );
+
+	/**
 	 * Slideout Mobiile Navigation
 	 */
 
