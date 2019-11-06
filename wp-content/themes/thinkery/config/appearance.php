@@ -105,18 +105,23 @@ return [
 	],
 	'editor-font-sizes'    => [
 		[
-			'name' => __( 'Small', 'genesis-sample' ),
+			'name' => __( 'X-Small', 'genesis-sample' ),
 			'size' => 14,
+			'slug' => 'x-small',
+		],
+		[
+			'name' => __( 'Small', 'genesis-sample' ),
+			'size' => 16,
 			'slug' => 'small',
 		],
 		[
 			'name' => __( 'Normal', 'genesis-sample' ),
-			'size' => 16,
+			'size' => 18,
 			'slug' => 'normal',
 		],
 		[
 			'name' => __( 'Medium', 'genesis-sample' ),
-			'size' => 18,
+			'size' => 20,
 			'slug' => 'medium',
 		],
 		[
