@@ -1008,6 +1008,8 @@ img.alignright,
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	max-width: 1168px;
+	margin: 0 auto;
 }
 .search-form-input,
 .search-form-submit {
