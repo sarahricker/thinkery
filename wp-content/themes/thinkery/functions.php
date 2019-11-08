@@ -59,11 +59,6 @@ function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingCon
 	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
 }
 
-// Registers the responsive menus.
-if ( function_exists( 'genesis_register_responsive_menus' ) ) {
-	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
-}
-
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
  * Enqueues scripts and styles.
@@ -92,6 +87,20 @@ function genesis_sample_enqueue_scripts_styles() {
 		);
 	}
 
+	wp_enqueue_script(
+		'magazine-entry-date',
+		get_stylesheet_directory_uri() . '/js/vendor/slideout-1.0.1/dist/slideout.min.js',
+		array( 'jquery' ),
+		'1.0.0'
+	);
+
+	wp_enqueue_script(
+		'thinkery-main',
+		get_stylesheet_directory_uri() . '/js/main.js',
+		array( 'jquery' ),
+		CHILD_THEME_VERSION,
+		true
+	);
 }
 
 add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
@@ -107,7 +116,7 @@ function genesis_sample_theme_support() {
 	$theme_supports = genesis_get_config( 'theme-supports' );
 
 	foreach ( $theme_supports as $feature => $args ) {
-		add_theme_support( $feature, $args );
+		 add_theme_support( $feature, $args );
 	}
 
 }
@@ -194,6 +203,83 @@ add_filter( 'genesis_search_text', 'thinkery_search_input_text' );
  */
 function thinkery_search_input_text( $text ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter
 	return esc_attr( 'search' );
+}
+
+/**
+ * Modify the site-container div attributes to support slideout nav.
+ */
+add_filter( 'genesis_attr_site-container', 'thinkery_container_attributes' );
+/**
+ * Modify the site-container div attributes to support slidout nav.
+ *
+ * @param array $attr The original attributes.
+ * @return array The modified attributes.
+ */
+function thinkery_container_attributes( $attr ) {
+	$attr['id'] = 'slideout-panel';
+	$attr['id'] = 'site-container';
+	return $attr;
+}
+
+/**
+ * Setup custom mobile slideout menu.
+ */
+add_action( 'genesis_before', 'thinkery_custom_side_menu' );
+/**
+ * Adds `#sideout-menu` above `.site-container`.
+ */
+function thinkery_custom_side_menu() { ?>
+	<div id="slideout-menu" class="side-menu">
+		<div class="wrap">
+			<div class="side-menu-header">
+				<div class="logo">
+					<a href="/sites/"><img src="<?php echo esc_url( CHILD_URL . '/images/logo-thinkery-bug.png' ); ?>" alt="Thinkery" /></a>
+				</div>
+				<button class="close-icon">
+					<i class="fas fa-times"></i> Close
+				</button>
+			</div>
+			<?php
+				// Add Primary Nav to side-menu
+				wp_nav_menu(
+					array(
+						'theme_location' => 'mobile',
+						'fallback_cb'    => false, // Do not fall back to wp_page_menu()
+					)
+				);
+				// Add search form to side-menu
+				get_search_form();
+			?>
+		</div>
+	</div>
+	<?php
+}
+
+
+add_filter( 'wp_nav_menu_args', 'thinkery_limit_mobile_menu_depth' );
+/**
+ * Reduce the primary navigation menu to one level depth
+ */
+function thinkery_limit_mobile_menu_depth( $args ){
+
+	$args['depth'] = 2;
+
+	if( 'mobile' == $args['theme_location'] ) {
+		$args['depth'] = 1;
+	}
+
+	return $args;
+}
+
+/**
+ * Add custom menu toggle.
+ */
+add_action( 'genesis_header_right', 'thinkery_custom_mobile_toggle' );
+/**
+ * Add custom menu toggle.
+ */
+function thinkery_custom_mobile_toggle() {
+	echo '<button class="menu-toggle" id="genesis-mobile-nav-primary">Menu <i class="fas fa-bars"></i></button>';
 }
 
 add_filter( 'genesis_author_box_gravatar_size', 'genesis_sample_author_box_gravatar' );
