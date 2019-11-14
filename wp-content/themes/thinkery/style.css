@@ -987,6 +987,33 @@ img.alignright,
 .admin-bar .side-menu {
 	top: 32px;
 }
+.header-info-bar {
+	background-color: #b43231;
+	padding: 13px 30px;
+}
+.header-info-bar * {
+	color: #ffffff;
+	text-decoration: none;
+}
+.header-info-bar .wrap {
+	max-width: 1168px;
+	margin: 0 auto;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.header-info-bar .right {
+	display: flex;
+	justify-content: space-between;
+}
+.header-info-bar .open-hours {
+	padding-bottom: 5px;
+}
+
+.header-info-bar i {
+	padding-right: 5px;
+}
+
 .site-header {
 	background-color: #db3e3d;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
@@ -1681,6 +1708,17 @@ p.entry-meta {
 		word-break: normal;
 	}
 
+	.header-info-bar .wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header-info-bar .open-hours {
+		padding-bottom: 0;
+	}
+	.header-info-bar .translate {
+		padding-left: 30px;
+	}
 }
 
 @media screen and (max-width: 782px) {

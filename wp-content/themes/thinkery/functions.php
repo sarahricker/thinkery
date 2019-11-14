@@ -101,6 +101,14 @@ function genesis_sample_enqueue_scripts_styles() {
 		CHILD_THEME_VERSION,
 		true
 	);
+
+	wp_enqueue_script(
+		'thinkery-fontawesome-kit',
+		'https://kit.fontawesome.com/193f8033dd.js',
+		array(),
+		CHILD_THEME_VERSION,
+		false
+	);
 }
 
 add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
@@ -153,6 +161,29 @@ unregister_sidebar( 'sidebar-alt' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+
+// Adds header info bar.
+add_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
+/**
+ * Sets up info bar at top of page before header navigation.
+ *
+ */
+function thinkery_info_bar() {
+
+	echo '<div class="header-info-bar">';
+		echo '<div class="wrap">';
+			echo '<div class="left">';
+				echo '<div class="open-hours"><i class="far fa-clock"></i> Today <span class="hours">10am - 8pm<span></div>';
+			echo '</div>';
+			echo '<div class="right">';
+				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i> 123-123-1234</div></a>';
+				echo '<div class="translate"><i class="fas fa-globe-americas"></i> EN <i class="fas fa-chevron-down"></i></div>';
+			echo '</div>';
+		echo '</div>';
+	echo '</div>';
+}
+
 
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
