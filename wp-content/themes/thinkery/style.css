@@ -1058,6 +1058,67 @@ img.alignright,
 	color: #1b2432;
 }
 
+/* Google Translate
+--------------------------------------------- */
+#google_translate_element {
+	display: flex;
+	justify-items: flex-start;
+	align-items: center;
+}
+
+#google_translate_element .goog-te-gadget {
+	color: transparent;
+	height: 22px;
+}
+
+#google_translate_element .goog-te-gadget>span {
+	visibility: hidden;
+}
+
+#google_translate_element .goog-te-gadget>div {
+	position: relative;
+}
+#google_translate_element .goog-te-gadget>div select.goog-te-combo {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	height: 22px;
+	border: none;
+	box-shadow: none;
+	font-family: museo-sans, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	text-indent: 5px;
+}
+#google_translate_element .goog-te-gadget>div:before {
+	content: '';
+	right: 0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	position: absolute;
+	pointer-events: none;
+	display: block;
+}
+#google_translate_element .goog-te-gadget>div:after {
+	content: "\f078";
+	font-family: "FontAwesome";
+	font-size: 0.9375rem;
+	color: #ffffff;
+	right: 15px;
+	top: 0;
+	position: absolute;
+	pointer-events: none;
+}
+#google_translate_element .goog-te-gadget>div select.goog-te-combo:hover,
+#google_translate_element .goog-te-gadget>div select.goog-te-combo:focus {
+	color: #1b2432;
+}
 
 /* Title Area
 --------------------------------------------- */
@@ -1134,7 +1195,7 @@ img.alignright,
 	display: block;
 	font-size: 16px;
 	font-family: museo-sans, sans-serif;
-    font-weight: 600;
+	font-weight: 600;
 	outline-offset: -1px;
 	padding-bottom: 12px;
 	padding-top: 12px;

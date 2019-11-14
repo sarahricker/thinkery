@@ -98,7 +98,7 @@ function genesis_sample_enqueue_scripts_styles() {
 		'thinkery-main',
 		get_stylesheet_directory_uri() . '/js/main.js',
 		array( 'jquery' ),
-		CHILD_THEME_VERSION,
+		'',
 		true
 	);
 
@@ -106,8 +106,8 @@ function genesis_sample_enqueue_scripts_styles() {
 		'thinkery-fontawesome-kit',
 		'https://kit.fontawesome.com/193f8033dd.js',
 		array(),
-		CHILD_THEME_VERSION,
-		false
+		'',
+		true
 	);
 }
 
@@ -178,7 +178,29 @@ function thinkery_info_bar() {
 			echo '</div>';
 			echo '<div class="right">';
 				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i> 123-123-1234</div></a>';
-				echo '<div class="translate"><i class="fas fa-globe-americas"></i> EN <i class="fas fa-chevron-down"></i></div>';
+				echo '<div id="google_translate_element" aria-label="google translate languages" class="translate"><i class="fas fa-globe-americas"></i></div>';
+				?>
+				<script type="text/javascript">// init google translate
+					function googleTranslateElementInit() {
+
+						// load google translate widget into #google_translate_element
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+
+						// Prevent duplicate "original text" h1 in Google tranlate widget
+						var removePopup = document.getElementById('goog-gt-tt');
+						removePopup.parentNode.removeChild(removePopup);
+
+					}
+
+					// adjust element for accessibility compliance
+					var old_googleTranslateElementInit = googleTranslateElementInit;
+					googleTranslateElementInit = function() {
+						old_googleTranslateElementInit();
+						jQuery('#google_translate_element .goog-te-combo').attr('aria-label', 'translate page language');
+					}
+				</script>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				<?php
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
