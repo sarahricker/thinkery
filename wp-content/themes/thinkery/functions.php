@@ -47,7 +47,11 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Include custom classes
+require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
+
+// Load our shortcodes.
+Shortcodes::init();
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 /**
@@ -174,10 +178,10 @@ function thinkery_info_bar() {
 	echo '<div class="header-info-bar">';
 		echo '<div class="wrap">';
 			echo '<div class="left">';
-				echo '<div class="open-hours"><i class="far fa-clock"></i> Today <span class="hours">10am - 8pm<span></div>';
+				echo '<div class="open-hours"><i class="far fa-clock"></i> Today <span class="hours">' . do_shortcode( '[thinkery_current_hours]' ) . '<span></div>';
 			echo '</div>';
 			echo '<div class="right">';
-				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i> 123-123-1234</div></a>';
+				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i>' . do_shortcode( '[thinkery_phone]' ) . '</div></a>';
 				echo '<div id="google_translate_element" aria-label="google translate languages" class="translate"><i class="fas fa-globe-americas"></i></div>';
 				?>
 				<script type="text/javascript">// init google translate
