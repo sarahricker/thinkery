@@ -47,7 +47,11 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Include custom classes
+require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
+
+// Load our shortcodes.
+Shortcodes::init();
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 /**
@@ -98,7 +102,15 @@ function genesis_sample_enqueue_scripts_styles() {
 		'thinkery-main',
 		get_stylesheet_directory_uri() . '/js/main.js',
 		array( 'jquery' ),
-		CHILD_THEME_VERSION,
+		'',
+		true
+	);
+
+	wp_enqueue_script(
+		'thinkery-fontawesome-kit',
+		'https://kit.fontawesome.com/193f8033dd.js',
+		array(),
+		'',
 		true
 	);
 }
@@ -153,6 +165,51 @@ unregister_sidebar( 'sidebar-alt' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+
+// Adds header info bar.
+add_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
+/**
+ * Sets up info bar at top of page before header navigation.
+ *
+ */
+function thinkery_info_bar() {
+
+	echo '<div class="header-info-bar">';
+		echo '<div class="wrap">';
+			echo '<div class="left">';
+				echo '<div class="open-hours"><i class="far fa-clock"></i> Today <span class="hours">' . do_shortcode( '[thinkery_current_hours]' ) . '<span></div>';
+			echo '</div>';
+			echo '<div class="right">';
+				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i>' . do_shortcode( '[thinkery_phone]' ) . '</div></a>';
+				echo '<div id="google_translate_element" aria-label="google translate languages" class="translate"><i class="fas fa-globe-americas"></i></div>';
+				?>
+				<script type="text/javascript">// init google translate
+					function googleTranslateElementInit() {
+
+						// load google translate widget into #google_translate_element
+						new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+
+						// Prevent duplicate "original text" h1 in Google tranlate widget
+						var removePopup = document.getElementById('goog-gt-tt');
+						removePopup.parentNode.removeChild(removePopup);
+
+					}
+
+					// adjust element for accessibility compliance
+					var old_googleTranslateElementInit = googleTranslateElementInit;
+					googleTranslateElementInit = function() {
+						old_googleTranslateElementInit();
+						jQuery('#google_translate_element .goog-te-combo').attr('aria-label', 'translate page language');
+					}
+				</script>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				<?php
+			echo '</div>';
+		echo '</div>';
+	echo '</div>';
+}
+
 
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
