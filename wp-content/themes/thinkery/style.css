@@ -42,10 +42,6 @@ Text Domain: genesis-sample
 	- WordPress
 - Widgets
 	- Featured Content
-- Plugins
-	- Genesis eNews Extended
-	- Genesis Simple FAQ
-	- WPForms
 - Skip Links
 - Site Header
 	- Title Area
@@ -61,6 +57,9 @@ Text Domain: genesis-sample
 - Sidebar
 - Footer Widgets
 - Site Footer
+- Plugins
+	- Modern Tribe Events Calendar
+	- Modern Tribe Events Calendar Add-On: The Events Calendar Category Colors
 - Media Queries
 	- Min-width: 960px
 		- Site Header
@@ -408,8 +407,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.site-container div.wpforms-container-full .wpforms-form input[type="submit"],
-.site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
 	background-color: #db3e3d;
 	border: 0;
@@ -433,10 +430,6 @@ input[type="reset"]:focus,
 input[type="reset"]:hover,
 input[type="submit"]:focus,
 input[type="submit"]:hover,
-.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:focus,
-.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:hover,
-.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
-.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
 	background-color: #0073e5;
@@ -841,119 +834,6 @@ img.alignright,
 	margin-bottom: 5px;
 	margin-top: 10px;
 }
-
-
-/* Plugins
----------------------------------------------------------------------------- */
-
-/* Genesis eNews Extended
---------------------------------------------- */
-
-.after-entry .enews {
-	text-align: center;
-	padding: 10px;
-}
-
-.sidebar .enews {
-	background-color: #f5f5f5;
-	padding: 30px;
-}
-
-.enews-widget input {
-	font-size: 16px;
-	margin-bottom: 10px;
-}
-
-.after-entry .enews-widget input {
-	text-align: center;
-}
-
-.enews-widget input[type="submit"] {
-	margin: 0;
-	width: 100%;
-}
-
-.enews form + p {
-	margin-top: 20px;
-}
-
-/* Genesis Simple FAQ
---------------------------------------------- */
-
-.gs-faq__question {
-	background: transparent;
-	border-bottom: 1px solid #eee;
-	color: #1b2432;
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.gs-faq__question:focus,
-.gs-faq__question:hover {
-	background: transparent;
-	color: #0073e5;
-}
-
-.gs-faq__question::after {
-	content: "\f132";
-	font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
-	float: right;
-}
-
-.gs-faq__question.gs-faq--expanded::after {
-	content: "\f460";
-}
-
-/* WP Forms
---------------------------------------------- */
-
-.entry-content .wpforms-container {
-	margin-bottom: 40px;
-}
-
-.entry-content .wpforms-form .wpforms-field {
-	clear: both;
-	margin: 20px 0;
-	overflow: hidden;
-}
-
-.site-container .wpforms-container .wpforms-form .wpforms-field input {
-	border-radius: 0;
-	height: auto;
-	padding: 15px;
-}
-
-.site-container .entry-content .wpforms-form .wpforms-field-label {
-	font-weight: 600;
-}
-
-.site-container .entry-content .wpforms-form .wpforms-field-sublabel {
-	font-size: 14px;
-	font-weight: 300;
-}
-
-.entry-content .wpforms-form .wpforms-field-hp {
-	display: none !important;
-	left: -9000px !important;
-	position: absolute !important;
-}
-
-.site-container .entry-content .wpforms-form textarea {
-	padding: 15px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-small {
-	height: 120px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-medium {
-	height: 200px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-large {
-	height: 300px;
-}
-
 
 /* Skip Links
 ---------------------------------------------------------------------------- */
@@ -1759,6 +1639,49 @@ p.entry-meta {
 }
 
 
+/* Plugins
+---------------------------------------------------------------------------- */
+
+/* Modern Tribe Events Calendar */
+
+.entry-content .tribe-events-sub-nav li::before {
+	display: none;
+}
+.tribe-events-page-title {
+	font-size: 40px;
+	font-weight: 600;
+	text-align: left;
+}
+.tribe-events-page-title span.date {
+	font-size: 16px;
+	color: #db3e3d;
+	display: block;
+	margin: 8px 0 4px;
+	text-transform: uppercase;
+}
+
+/* Modern Tribe Events Calendar Add-On: The Events Calendar Category Colors */
+.teccc-legend ul {
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+#legend_box.teccc-legend ul li {
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.33;
+	margin: 0 8px 8px 0;
+	border-radius: 16px;
+	padding: 0;
+}
+.teccc-legend li a {
+	padding: 8px 16px;
+	display: block;
+}
+.teccc-legend ul li::before {
+	display: none;
+}
+
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
@@ -1994,11 +1917,6 @@ p.entry-meta {
 
 	.after-entry {
 		padding: 40px 60px;
-	}
-
-	.after-entry .enews {
-		padding-left: 30px;
-		padding-right: 30px;
 	}
 
 	/* Column Classes

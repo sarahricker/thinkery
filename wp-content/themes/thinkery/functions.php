@@ -166,7 +166,6 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
-
 // Adds header info bar.
 add_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
 /**
@@ -369,3 +368,6 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+// Adds custom color support for Events Calendar Categories
+teccc_add_legend_view( 'day' );
