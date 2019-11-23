@@ -1660,6 +1660,23 @@ p.entry-meta {
 	text-transform: uppercase;
 }
 
+.tribe-events-day .tribe-events-day-time-slot .tribe-events-day-time-slot-heading:after {
+	content: "";
+	border-bottom: 1px solid #e7ecf3;
+	width: 85%;
+	float: right;
+	padding-top: 7px;
+}
+
+.tribe-events-day .tribe-events-day-time-slot .tribe-events-day-time-slot-heading {
+	background: none;
+	padding: 0;
+}
+
+.tribe-events-list.tribe-events-day .type-tribe_events {
+	border-bottom: none;
+}
+
 /* Modern Tribe Events Calendar Add-On: The Events Calendar Category Colors */
 .teccc-legend ul {
 	padding-left: 0;
