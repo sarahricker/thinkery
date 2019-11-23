@@ -1677,6 +1677,74 @@ p.entry-meta {
 	border-bottom: none;
 }
 
+
+#tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav {
+	overflow: visible;
+}
+
+
+/* Next / Previous  Links */
+
+#legend_box {
+	clear: both;
+}
+#tribe-events-header {
+	margin-bottom: 0;
+}
+#tribe-events-footer {
+	display: none;
+}
+ul.tribe-events-sub-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+ul.tribe-events-sub-nav li {
+	position: absolute;
+}
+ul.tribe-events-sub-nav li.tribe-events-nav-next {
+	right: 0;
+}
+ul.tribe-events-sub-nav li.tribe-events-nav-previous {
+	right: 22px;
+}
+.tribe-events-nav-previous a,
+.tribe-events-nav-next a {
+	color: transparent;
+}
+.tribe-events-nav-previous a::before,
+.tribe-events-nav-next a::before {
+	color: #ffffff;
+	font-family: "Font Awesome 5 Free";
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	padding: 6px 8px;
+	top: 0;
+}
+
+.tribe-events-nav-previous a::before {
+	content: "\f053";
+	background-color: #c4c5d4;
+	left: 0;
+}
+.tribe-events-nav-next a::before {
+	content: "\f054";
+	background-color:  #151853;
+	right: 0;
+}
+.tribe-events-nav-previous a:hover::before,
+.tribe-events-nav-next a:hover::before {
+	background-color: #db3e3d;
+}
+
+.tribe-events-week-grid .tribe-events-nav-pagination {
+	height: 50px;
+}
+
 /* Modern Tribe Events Calendar Add-On: The Events Calendar Category Colors */
 .teccc-legend ul {
 	padding-left: 0;
