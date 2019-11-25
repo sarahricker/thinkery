@@ -1652,6 +1652,16 @@ p.entry-meta {
 	font-weight: 600;
 	text-align: left;
 }
+.tribe-events-day .tribe-events-event-meta {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.tribe-events-day .tribe-events-event-meta .time-details {
+    padding: 0;
+}
+
 .tribe-events-page-title span.date {
 	font-size: 16px;
 	color: #db3e3d;
@@ -1698,7 +1708,6 @@ p.entry-meta {
 #tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav {
 	overflow: visible;
 }
-
 
 /* Next / Previous  Links */
 
