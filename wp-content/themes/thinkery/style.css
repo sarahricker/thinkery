@@ -1660,10 +1660,26 @@ p.entry-meta {
 	text-transform: uppercase;
 }
 
+.tribe-events-day .tribe-events-day-time-slot .type-tribe_events {
+	margin-left: 15%;
+}
+.tribe-events-list.tribe-events-day .type-tribe_events {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 16px;
+}
+.tribe-events-day h3.tribe-events-list-event-title.summary {
+	border: none;
+}
+
+.tribe-events-list.tribe-events-day a.url {
+	display: block;
+}
+
 .tribe-events-day .tribe-events-day-time-slot .tribe-events-day-time-slot-heading:after {
 	content: "";
 	border-bottom: 1px solid #e7ecf3;
-	width: 85%;
+	width: 88%;
 	float: right;
 	padding-top: 7px;
 }
@@ -1675,6 +1691,7 @@ p.entry-meta {
 
 .tribe-events-list.tribe-events-day .type-tribe_events {
 	border-bottom: none;
+	border-radius: 4px;
 }
 
 

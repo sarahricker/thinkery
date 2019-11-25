@@ -48,6 +48,7 @@ class Base_CSS {
 		$css[] = ".tribe-events-calendar .tribe-events-category-{$slug},";
 		$css[] = "#tribe-events-content .tribe-events-category-{$slug} > .tribe-events-tooltip h3,";
 		$css[] = ".type-tribe_events.tribe-events-category-{$slug},"; // was  `...{$slug} h2,";`
+		$css[] = ".type-tribe_events.tribe-events-category-{$slug} a,"; // new
 		$css[] = ".tribe-events-category-{$slug} > div.hentry.vevent > h3.entry-title,";
 		$css[] = ".tribe-events-mobile.tribe-events-category-{$slug} h4";
 
@@ -69,6 +70,8 @@ class Base_CSS {
 .tribe-events-list .vevent.hentry h2 {
 	padding-left: 5px;
 }
+
+
 
 <?php Extras::add_mobile_css(); ?>
 
@@ -123,9 +126,6 @@ if ( empty( $teccc->terms ) && ! empty( $options['terms'] ) ) {
 	<?php if ( 'no_color' !== $options[ "{$slug}-text" ] ) : ?>
 		color: <?php esc_attr_e( $options[ "{$slug}-text" ] ); ?>;
 	<?php endif ?>
-	line-height: 1.4em;
-	padding-left: 5px;
-	padding-bottom: 2px;
 }
 
 	<?php Extras::add_featured_event_border_css( $slug, $options ); ?>
