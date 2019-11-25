@@ -1893,6 +1893,31 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 	border: none;
 }
 
+/* Mini Calendar Event List*/
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event {
+	border: none;
+	margin-top: 10px;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event .list-date {
+	background: transparent;
+	padding: 0;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event .list-date .list-daynumber {
+	border: 1px solid white;
+}
+.tribe-mini-calendar-wrapper .tribe-events-adv-list-widget .type-tribe_events,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-list-wrapper .type-tribe_events {
+	border: none;
+	padding-left: 12px;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event {
+	margin-top: 10px;
+}
+.tribe-mini-calendar-wrapper .tribe-events-title a {
+	border: none;
+}
+
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
