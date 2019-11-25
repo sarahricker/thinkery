@@ -1791,6 +1791,109 @@ ul.tribe-events-sub-nav li.tribe-events-nav-previous {
 	display: none;
 }
 
+
+/* Mini Calendar */
+.tribe-mini-calendar-wrapper .tribe-mini-calendar thead {
+	background-color: #ffffff;
+	border: 1px solid #e7ecf3;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar td, .tribe-mini-calendar th {
+	font-size: 14px;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-nav-link  {
+	color: #c4c5d4;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-nav span {
+	color: #db3e3d;
+	font-family: museo-sans, sans-serif;
+	font-size: 14px;
+	text-transform: capitalize;
+	padding: 16px 0;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-dayofweek {
+	background-color: #ffffff;
+	padding: 8px;
+}
+
+.tribe-mini-calendar-wrapper a.tribe-mini-calendar-nav-link span {
+	height: 1px;
+	color: transparent;
+}
+a.tribe-mini-calendar-nav-link span::before {
+	color: grey;
+	font-family: "Font Awesome 5 Free";
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 50%;
+	height: 12px;
+	width: 8px;
+	position: absolute;
+	padding: 10px 24px;
+	top: 0;
+}
+
+a.tribe-mini-calendar-nav-link  {
+	position: absolute;
+	top: 0;
+	width: 40px;
+	margin: 0;
+}
+a.tribe-mini-calendar-nav-link.next-month {
+	right: 0;
+}
+
+a.tribe-mini-calendar-nav-link.prev-month {
+	left: 0;
+}
+
+
+a.tribe-mini-calendar-nav-link span::before {
+	top: 8px;
+}
+
+a.tribe-mini-calendar-nav-link.prev-month span::before {
+	content: "\f053";
+	left: 0;
+}
+a.tribe-mini-calendar-nav-link.next-month span::before {
+	content: "\f054";
+	right: 0;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-present,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-mini-calendar-today {
+	background-color: #db3e3d;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a:before {
+	display: none;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-no-event {
+	padding: 15px 0 15px;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-no-event {
+	font-weight: normal;
+	color: #1b2432;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar {
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	border: solid 1px #ececee;
+}
+
+.tribe-mini-calendar-nav tr:nth-child(2) {
+	border-top: 1px solid #e7ecf3;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar td,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar th {
+	border: none;
+}
+
+
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
