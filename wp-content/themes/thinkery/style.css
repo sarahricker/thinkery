@@ -42,10 +42,6 @@ Text Domain: genesis-sample
 	- WordPress
 - Widgets
 	- Featured Content
-- Plugins
-	- Genesis eNews Extended
-	- Genesis Simple FAQ
-	- WPForms
 - Skip Links
 - Site Header
 	- Title Area
@@ -61,6 +57,9 @@ Text Domain: genesis-sample
 - Sidebar
 - Footer Widgets
 - Site Footer
+- Plugins
+	- Modern Tribe Events Calendar
+	- Modern Tribe Events Calendar Add-On: The Events Calendar Category Colors
 - Media Queries
 	- Min-width: 960px
 		- Site Header
@@ -408,8 +407,6 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.site-container div.wpforms-container-full .wpforms-form input[type="submit"],
-.site-container div.wpforms-container-full .wpforms-form button[type="submit"],
 .button {
 	background-color: #db3e3d;
 	border: 0;
@@ -433,10 +430,6 @@ input[type="reset"]:focus,
 input[type="reset"]:hover,
 input[type="submit"]:focus,
 input[type="submit"]:hover,
-.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:focus,
-.site-container div.wpforms-container-full .wpforms-form input[type="submit"]:hover,
-.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:focus,
-.site-container div.wpforms-container-full .wpforms-form button[type="submit"]:hover,
 .button:focus,
 .button:hover {
 	background-color: #0073e5;
@@ -841,119 +834,6 @@ img.alignright,
 	margin-bottom: 5px;
 	margin-top: 10px;
 }
-
-
-/* Plugins
----------------------------------------------------------------------------- */
-
-/* Genesis eNews Extended
---------------------------------------------- */
-
-.after-entry .enews {
-	text-align: center;
-	padding: 10px;
-}
-
-.sidebar .enews {
-	background-color: #f5f5f5;
-	padding: 30px;
-}
-
-.enews-widget input {
-	font-size: 16px;
-	margin-bottom: 10px;
-}
-
-.after-entry .enews-widget input {
-	text-align: center;
-}
-
-.enews-widget input[type="submit"] {
-	margin: 0;
-	width: 100%;
-}
-
-.enews form + p {
-	margin-top: 20px;
-}
-
-/* Genesis Simple FAQ
---------------------------------------------- */
-
-.gs-faq__question {
-	background: transparent;
-	border-bottom: 1px solid #eee;
-	color: #1b2432;
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.gs-faq__question:focus,
-.gs-faq__question:hover {
-	background: transparent;
-	color: #0073e5;
-}
-
-.gs-faq__question::after {
-	content: "\f132";
-	font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
-	float: right;
-}
-
-.gs-faq__question.gs-faq--expanded::after {
-	content: "\f460";
-}
-
-/* WP Forms
---------------------------------------------- */
-
-.entry-content .wpforms-container {
-	margin-bottom: 40px;
-}
-
-.entry-content .wpforms-form .wpforms-field {
-	clear: both;
-	margin: 20px 0;
-	overflow: hidden;
-}
-
-.site-container .wpforms-container .wpforms-form .wpforms-field input {
-	border-radius: 0;
-	height: auto;
-	padding: 15px;
-}
-
-.site-container .entry-content .wpforms-form .wpforms-field-label {
-	font-weight: 600;
-}
-
-.site-container .entry-content .wpforms-form .wpforms-field-sublabel {
-	font-size: 14px;
-	font-weight: 300;
-}
-
-.entry-content .wpforms-form .wpforms-field-hp {
-	display: none !important;
-	left: -9000px !important;
-	position: absolute !important;
-}
-
-.site-container .entry-content .wpforms-form textarea {
-	padding: 15px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-small {
-	height: 120px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-medium {
-	height: 200px;
-}
-
-.site-container .entry-content .wpforms-form textarea.wpforms-field-large {
-	height: 300px;
-}
-
 
 /* Skip Links
 ---------------------------------------------------------------------------- */
@@ -1759,6 +1639,295 @@ p.entry-meta {
 }
 
 
+/* Plugins
+---------------------------------------------------------------------------- */
+
+/* Modern Tribe Events Calendar */
+
+.entry-content .tribe-events-sub-nav li::before {
+	display: none;
+}
+.tribe-events-page-title {
+	font-size: 40px;
+	font-weight: 600;
+	text-align: left;
+}
+.tribe-events-day .tribe-events-event-meta {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.tribe-events-day .tribe-events-event-meta .time-details {
+    padding: 0;
+}
+
+.tribe-events-page-title span.date {
+	font-size: 16px;
+	color: #db3e3d;
+	display: block;
+	margin: 8px 0 4px;
+	text-transform: uppercase;
+}
+
+.tribe-events-day .tribe-events-day-time-slot .type-tribe_events {
+	margin-left: 15%;
+}
+.tribe-events-list.tribe-events-day .type-tribe_events {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 16px;
+}
+.tribe-events-day h3.tribe-events-list-event-title.summary {
+	border: none;
+}
+
+.tribe-events-list.tribe-events-day a.url {
+	display: block;
+}
+
+.tribe-events-day .tribe-events-day-time-slot .tribe-events-day-time-slot-heading:after {
+	content: "";
+	border-bottom: 1px solid #e7ecf3;
+	width: 88%;
+	float: right;
+	padding-top: 7px;
+}
+
+.tribe-events-day .tribe-events-day-time-slot .tribe-events-day-time-slot-heading {
+	background: none;
+	padding: 0;
+}
+
+.tribe-events-list.tribe-events-day .type-tribe_events {
+	border-bottom: none;
+	border-radius: 4px;
+}
+
+
+#tribe-events-footer .tribe-events-sub-nav, #tribe-events-header .tribe-events-sub-nav {
+	overflow: visible;
+}
+
+/* Next / Previous  Links */
+
+#legend_box {
+	clear: both;
+}
+#tribe-events-header {
+	margin-bottom: 0;
+}
+#tribe-events-footer {
+	display: none;
+}
+ul.tribe-events-sub-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+ul.tribe-events-sub-nav li {
+	position: absolute;
+}
+ul.tribe-events-sub-nav li.tribe-events-nav-next {
+	right: 0;
+}
+ul.tribe-events-sub-nav li.tribe-events-nav-previous {
+	right: 22px;
+}
+.tribe-events-nav-previous a,
+.tribe-events-nav-next a {
+	color: transparent;
+}
+.tribe-events-nav-previous a::before,
+.tribe-events-nav-next a::before {
+	color: #ffffff;
+	font-family: "Font Awesome 5 Free";
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	padding: 6px 8px;
+	top: 0;
+}
+
+.tribe-events-nav-previous a::before {
+	content: "\f053";
+	background-color: #c4c5d4;
+	left: 0;
+}
+.tribe-events-nav-next a::before {
+	content: "\f054";
+	background-color:  #151853;
+	right: 0;
+}
+.tribe-events-nav-previous a:hover::before,
+.tribe-events-nav-next a:hover::before {
+	background-color: #db3e3d;
+}
+
+.tribe-events-week-grid .tribe-events-nav-pagination {
+	height: 50px;
+}
+
+/* Modern Tribe Events Calendar Add-On: The Events Calendar Category Colors */
+.teccc-legend ul {
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+#legend_box.teccc-legend ul li {
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.33;
+	margin: 0 8px 8px 0;
+	border-radius: 16px;
+	padding: 0;
+}
+.teccc-legend li a {
+	padding: 8px 16px;
+	display: block;
+}
+.teccc-legend ul li::before {
+	display: none;
+}
+/* Hide categories in legend only
+ * (TECC hide feature hides everywhere, need to retain chosen color as background)
+ */
+.teccc-legend li.tribe-events-category-12, /* Closed to public */
+.teccc-legend li.tribe-events-category-17 { /* Open to public */
+	display: none;
+}
+
+
+/* Mini Calendar */
+.tribe-mini-calendar-wrapper .tribe-mini-calendar thead {
+	background-color: #ffffff;
+	border: 1px solid #e7ecf3;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar td, .tribe-mini-calendar th {
+	font-size: 14px;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-nav-link  {
+	color: #c4c5d4;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-nav span {
+	color: #db3e3d;
+	font-family: museo-sans, sans-serif;
+	font-size: 14px;
+	text-transform: capitalize;
+	padding: 16px 0;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-dayofweek {
+	background-color: #ffffff;
+	padding: 8px;
+}
+
+.tribe-mini-calendar-wrapper a.tribe-mini-calendar-nav-link span {
+	height: 1px;
+	color: transparent;
+}
+a.tribe-mini-calendar-nav-link span::before {
+	color: grey;
+	font-family: "Font Awesome 5 Free";
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 50%;
+	height: 12px;
+	width: 8px;
+	position: absolute;
+	padding: 10px 24px;
+	top: 0;
+}
+
+a.tribe-mini-calendar-nav-link  {
+	position: absolute;
+	top: 0;
+	width: 40px;
+	margin: 0;
+}
+a.tribe-mini-calendar-nav-link.next-month {
+	right: 0;
+}
+
+a.tribe-mini-calendar-nav-link.prev-month {
+	left: 0;
+}
+
+
+a.tribe-mini-calendar-nav-link span::before {
+	top: 8px;
+}
+
+a.tribe-mini-calendar-nav-link.prev-month span::before {
+	content: "\f053";
+	left: 0;
+}
+a.tribe-mini-calendar-nav-link.next-month span::before {
+	content: "\f054";
+	right: 0;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-present,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-mini-calendar-today {
+	background-color: #db3e3d;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a:before {
+	display: none;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-no-event {
+	padding: 15px 0 15px;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-no-event {
+	font-weight: normal;
+	color: #1b2432;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar {
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+	border: solid 1px #ececee;
+}
+
+.tribe-mini-calendar-nav tr:nth-child(2) {
+	border-top: 1px solid #e7ecf3;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar td,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar th {
+	border: none;
+}
+
+/* Mini Calendar Event List*/
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event {
+	border: none;
+	margin-top: 10px;
+}
+
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event .list-date {
+	background: transparent;
+	padding: 0;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event .list-date .list-daynumber {
+	border: 1px solid white;
+}
+.tribe-mini-calendar-wrapper .tribe-events-adv-list-widget .type-tribe_events,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-list-wrapper .type-tribe_events {
+	border: none;
+	padding-left: 12px;
+}
+.tribe-mini-calendar-wrapper .tribe-mini-calendar-event {
+	margin-top: 10px;
+}
+.tribe-mini-calendar-wrapper .tribe-events-title a {
+	border: none;
+}
+
+
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
@@ -1994,11 +2163,6 @@ p.entry-meta {
 
 	.after-entry {
 		padding: 40px 60px;
-	}
-
-	.after-entry .enews {
-		padding-left: 30px;
-		padding-right: 30px;
 	}
 
 	/* Column Classes

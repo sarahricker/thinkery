@@ -1,4 +1,11 @@
 jQuery(function ($) {
+	/**
+	 * Hide Modern tribe mini calendar event list until clicked
+	 */
+	$( ".tribe-mini-calendar-list-wrapper" ).hide();
+	$( ".tribe-mini-calendar-grid-wrapper" ).on( "click", function() {
+		$( ".tribe-mini-calendar-list-wrapper" ).fadeIn();
+	} );
 
 	/**
 	 * Slideout Search Bar in Header
