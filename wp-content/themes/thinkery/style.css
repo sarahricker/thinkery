@@ -1766,6 +1766,13 @@ ul.tribe-events-sub-nav li.tribe-events-nav-previous {
 .teccc-legend ul li::before {
 	display: none;
 }
+/* Hide categories in legend only
+ * (TECC hide feature hides everywhere, need to retain chosen color as background)
+ */
+.teccc-legend li.tribe-events-category-12, /* Closed to public */
+.teccc-legend li.tribe-events-category-17 { /* Open to public */
+	display: none;
+}
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
