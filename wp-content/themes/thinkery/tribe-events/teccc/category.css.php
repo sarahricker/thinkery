@@ -3,7 +3,7 @@
  * The Events Calendar Category Colors Overrides
  *
  * Adjustments to plugins generated stylesheet to expand use of custom colors in views
- * Settings panel must be resaved in Admin to trigger changes
+ * Add ?refresh_css to events url refresh the css + see your changes
  *
  * Stylesheet originally copied from the-events-calendar-category-colors v.6.3.2
  *
@@ -14,10 +14,50 @@
 
 namespace Fragen\Category_Colors;
 
-use Fragen\Category_Colors\CSS\Base_CSS;
+//use Fragen\Category_Colors\CSS\Base_CSS;
 use Fragen\Category_Colors\CSS\Extras;
 use Fragen\Category_Colors\CSS\Widgets;
 use Fragen\Category_Colors\CSS\Pro;
+
+
+// Overriding Base_CSS Function to apply css to different element
+class Base_CSS {
+
+	public static function add_link_css( $slug ) {
+		$css = array();
+
+		$css[] = "#tribe-events-content table.tribe-events-calendar .tribe-event-featured.tribe-events-category-{$slug} .tribe-events-month-event-title a,";
+		$css[] = ".teccc-legend .tribe-events-category-{$slug} a,";
+		$css[] = ".tribe-events-calendar .tribe-events-category-{$slug} a,";
+		$css[] = "#tribe-events-content .teccc-legend .tribe-events-category-{$slug} a,";
+		$css[] = "#tribe-events-content .tribe-events-calendar .tribe-events-category-{$slug} a,";
+		$css[] = ".type-tribe_events.tribe-events-category-{$slug} h2 a,";
+		$css[] = ".tribe-events-category-{$slug} > div.hentry.vevent > h3.entry-title a,";
+		$css[] = ".tribe-events-mobile.tribe-events-category-{$slug} h4 a";
+
+		$css[] = '';
+		$css   = implode( "\n", $css );
+		echo $css;
+	}
+
+	public static function add_background_css( $slug ) {
+		$css = array();
+
+		$css[] = ".events-archive.events-gridview #tribe-events-content table .type-tribe_events.tribe-events-category-{$slug},";
+		$css[] = ".teccc-legend .tribe-events-category-{$slug},";
+		$css[] = ".tribe-events-calendar .tribe-events-category-{$slug},";
+		$css[] = "#tribe-events-content .tribe-events-category-{$slug} > .tribe-events-tooltip h3,";
+		$css[] = ".type-tribe_events.tribe-events-category-{$slug},"; // was  `...{$slug} h2,";`
+		$css[] = ".tribe-events-category-{$slug} > div.hentry.vevent > h3.entry-title,";
+		$css[] = ".tribe-events-mobile.tribe-events-category-{$slug} h4";
+
+		$css[] = '';
+		$css   = implode( "\n", $css );
+		echo $css;
+	}
+}
+
+
 
 ?>
 /* The Events Calendar Category Colors <?php echo Main::$version; ?> */
