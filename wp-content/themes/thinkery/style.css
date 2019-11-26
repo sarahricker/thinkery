@@ -1795,11 +1795,10 @@ ul.tribe-events-sub-nav li.tribe-events-nav-previous {
 /* Hide categories in legend only
  * (TECC hide feature hides everywhere, need to retain chosen color as background)
  */
-.teccc-legend li.tribe-events-category-12, /* Closed to public */
-.teccc-legend li.tribe-events-category-17 { /* Open to public */
+.teccc-legend li.tribe-events-category-open-to-public, /* Closed to public */
+.teccc-legend li.tribe-events-category-closed-to-public { /* Open to public */
 	display: none;
 }
-
 
 /* Mini Calendar */
 .tribe-mini-calendar-wrapper .tribe-mini-calendar thead {
