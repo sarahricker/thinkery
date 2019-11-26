@@ -894,12 +894,10 @@ img.alignright,
 }
 .header-info-bar .open-hours .widget {
 	margin-bottom: 0;
+	display: flex;
 }
 .header-info-bar .open-hours .widget::before {
 	display: none;
-}
-.header-info-bar .open-hours .widget-wrap {
-	display: flex;
 }
 .header-info-bar .open-hours span.op-closed,
 .header-info-bar .open-hours span.op-open {
