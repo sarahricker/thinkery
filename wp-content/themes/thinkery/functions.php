@@ -200,7 +200,7 @@ function thinkery_info_bar() {
 				echo '</div>';
 			}
 			echo '<div class="right">';
-				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i>' . do_shortcode( '[thinkery_phone]' ) . '</div></a>';
+				echo '<div class="phone"><i class="fas fa-phone-alt"></i>' . do_shortcode( '[thinkery_phone]' ) . '</div>';
 				echo '<div id="google_translate_element" aria-label="google translate languages" class="translate"><i class="fas fa-globe-americas"></i></div>';
 				?>
 				<script type="text/javascript">// init google translate
