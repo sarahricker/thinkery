@@ -25,7 +25,6 @@ class Shortcodes {
 	public function shortcodes() {
 		add_shortcode( 'thinkery_phone', [ $this, 'do_shortcode_phone' ] );
 		add_shortcode( 'thinkery_address', [ $this, 'do_shortcode_address' ] );
-		add_shortcode( 'thinkery_current_hours', [ $this, 'do_shortcode_current_hours' ] );
 	}
 
 	/**
@@ -74,23 +73,5 @@ class Shortcodes {
 		);
 
 		return $atts['address'];
-	}
-
-	/**
-	 * Shortcode to show today's hours of operation set in the Customizer
-	 *
-	 * @param  array $atts Array of shortcode attributes.
-	 * @return string      Today's hours of operation.
-	 */
-	public function do_shortcode_current_hours( $atts ) {
-		$atts = wp_parse_args(
-			[
-				'current_hours' => '10am&ndash;8pm',
-			],
-			$atts,
-			'thinkery_current_hours'
-		);
-
-		return $atts['current_hours'];
 	}
 }

@@ -177,7 +177,7 @@ function thinkery_info_bar() {
 	echo '<div class="header-info-bar">';
 		echo '<div class="wrap">';
 			echo '<div class="left">';
-				echo '<div class="open-hours"><i class="far fa-clock"></i> Today <span class="hours">' . do_shortcode( '[thinkery_current_hours]' ) . '<span></div>';
+				echo '<div class="open-hours"><i class="far fa-clock"></i><span class="hours"> ' . do_shortcode( '[op-is-open set_id="532" show_today="always" today_format="Today: %1$s"]' ) . '</span></div>';
 			echo '</div>';
 			echo '<div class="right">';
 				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i>' . do_shortcode( '[thinkery_phone]' ) . '</div></a>';
