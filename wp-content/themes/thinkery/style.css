@@ -885,9 +885,22 @@ img.alignright,
 .header-info-bar .right {
 	display: flex;
 	justify-content: space-between;
+	flex-shrink: 0;
 }
 .header-info-bar .open-hours {
 	padding-bottom: 5px;
+	display: flex;
+	align-items: baseline;
+}
+
+.header-info-bar .open-hours span.op-closed,
+.header-info-bar .open-hours span.op-open {
+	display: none;
+}
+
+.header-info-bar .open-hours span.hours,
+.header-info-bar .open-hours .open-hours i {
+	display: inline-block;
 }
 
 .header-info-bar i {
@@ -1940,7 +1953,8 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 	.header-info-bar .wrap {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: baseline;
+		flex-shrink: 0;
 	}
 	.header-info-bar .open-hours {
 		padding-bottom: 0;
