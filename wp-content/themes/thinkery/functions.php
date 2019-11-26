@@ -166,6 +166,22 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+
+/**
+ * Register new widgets
+ */
+function thinkery_widgets_init() {
+	// Open Hours Widget area (Info Bar)
+	register_sidebar( array(
+		'name'          => __( 'Open Hours', 'thinkery' ),
+		'id'            => 'open-hours',
+		'description'   => __( 'Widget appears in left side of top info bar.', 'textdomain' ),
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+	) );
+}
+add_action( 'widgets_init', 'thinkery_widgets_init' );
+
 // Adds header info bar.
 add_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
 /**
@@ -176,9 +192,13 @@ function thinkery_info_bar() {
 
 	echo '<div class="header-info-bar">';
 		echo '<div class="wrap">';
-			echo '<div class="left">';
-				echo '<div class="open-hours"><i class="far fa-clock"></i><span class="hours"> ' . do_shortcode( '[op-is-open set_id="532" show_today="always" today_format="Today: %1$s"]' ) . '</span></div>';
-			echo '</div>';
+			if ( is_active_sidebar( 'open-hours' ) ) {
+				echo '<div class="left">';
+					echo '<div class="open-hours"><i class="far fa-clock"></i><span class="hours"> ';
+					dynamic_sidebar('open-hours');
+					echo '</span></div>';
+				echo '</div>';
+			}
 			echo '<div class="right">';
 				echo '<div class="phone"><a href="tel:123-123-1234"><i class="fas fa-phone-alt"></i>' . do_shortcode( '[thinkery_phone]' ) . '</div></a>';
 				echo '<div id="google_translate_element" aria-label="google translate languages" class="translate"><i class="fas fa-globe-americas"></i></div>';

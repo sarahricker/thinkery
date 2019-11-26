@@ -892,17 +892,21 @@ img.alignright,
 	display: flex;
 	align-items: baseline;
 }
-
-.header-info-bar .open-hours span.op-closed,
-.header-info-bar .open-hours span.op-open {
+.header-info-bar .open-hours .widget {
+	margin-bottom: 0;
+}
+.header-info-bar .open-hours .widget::before {
 	display: none;
 }
-
-.header-info-bar .open-hours span.hours,
-.header-info-bar .open-hours .open-hours i {
-	display: inline-block;
+.header-info-bar .open-hours .widget-wrap {
+	display: flex;
+}
+.header-info-bar .open-hours span.op-closed,
+.header-info-bar .open-hours span.op-open {
+	color: #ffffff;
 }
 
+.header-info-bar .open-hours span.op-open,
 .header-info-bar i {
 	padding-right: 5px;
 }
