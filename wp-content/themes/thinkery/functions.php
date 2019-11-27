@@ -116,6 +116,17 @@ function genesis_sample_enqueue_scripts_styles() {
 }
 
 add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
+
+function thinkery_gutenberg_enqueue() {
+	wp_enqueue_script(
+		'thinkery-gutenberg-script',
+		get_stylesheet_directory_uri() . '/js/gutenberg.js',
+		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ),
+		'1.0.0'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'thinkery_gutenberg_enqueue' );
+
 /**
  * Add desired theme supports.
  *

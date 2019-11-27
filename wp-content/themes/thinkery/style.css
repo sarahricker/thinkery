@@ -235,36 +235,27 @@ h6 {
 	margin: 0 0 20px;
 }
 
-h1 {
+h1, .is-style-h1 {
 	font-size: 30px;
 }
 
-h2 {
+h2,.is-style-h2 {
 	font-size: 27px;
 }
 
-h3 {
+h3, .is-style-h3 {
 	font-size: 24px;
 }
 
-h4 {
+h4, .is-style-h4 {
 	font-size: 20px;
 }
 
-.entry-content h3,
-.entry-content h4 {
-	font-weight: 600;
-}
-
-.entry-content h4 {
-	margin-top: 40px;
-}
-
-h5 {
+h5, .is-style-h5 {
 	font-size: 18px;
 }
 
-h6 {
+h6, .is-style-h6 {
 	font-size: 16px;
 }
 
@@ -683,8 +674,8 @@ th:last-child {
 	margin-bottom: 20px;
 }
 
-.entry-title {
-	font-size: 65px;
+.entry-title, .is-style-entry-title {
+	font-size: 64px;
 	margin-bottom: 20px;
 }
 
