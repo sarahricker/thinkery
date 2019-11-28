@@ -24,7 +24,7 @@
 
 .logos-section-header {
 	color: #111;
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	font-family: museo-sans, sans-serif;
 	font-size: 12px;
 	font-style: normal;
 	letter-spacing: 0.1em;
@@ -160,7 +160,7 @@
 
 .site-container .ab-button {
 	background-color: #db3e3d;
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	font-family: museo-sans, sans-serif;
 	font-weight: 700;
 	transform: translate3d(0, 0, 0);
 }
@@ -256,7 +256,7 @@
 	}
 
 	.wp-block-image.stylized-background::before {
-		background: #f4f4f4;
+		background: #e7ecf3;
 		content: "";
 		display: block;
 		right: 0;
@@ -268,7 +268,7 @@
 	}
 
 	.wp-block-media-text .wp-block-media-text__media::before {
-		background: #f4f4f4;
+		background: #e7ecf3;
 		content: "";
 		display: block;
 		left: 0;
@@ -367,7 +367,7 @@
 	color: #ccc;
 	content: "\201C";
 	display: block;
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: museo-sans, sans-serif;
 	font-size: 40px;
 	font-style: italic;
 	font-weight: 500;
@@ -459,8 +459,8 @@
 .site-container .wp-block-quote cite,
 .site-container .wp-block-pullquote cite {
 	display: block;
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-	font-size: 14px;
+	font-family: museo-sans, sans-serif;
+	font-size: 16px;
 	font-style: normal;
 	font-weight: 900;
 	letter-spacing: 0.08em;
@@ -482,7 +482,7 @@
 .site-container .wp-block-embed figcaption,
 .site-container .wp-block-image figcaption {
 	color: #111;
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	font-family: museo-sans, sans-serif;
 	font-size: 12px;
 	font-style: normal;
 	letter-spacing: 0.1em;
@@ -639,7 +639,7 @@ hr.wp-block-separator {
 .ab-newsletter-email-address-label {
 	color: #707070;
 	display: block;
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	font-family: museo-sans, sans-serif;
 	font-size: 13px;
 	font-weight: 700;
 	letter-spacing: 0.08em;
@@ -649,7 +649,7 @@ hr.wp-block-separator {
 
 .ab-block-newsletter input:not([type="submit"]) {
 	background: #fff;
-	border: 1px solid #f4f4f4;
+	border: 1px solid #e7ecf3;
 	box-shadow: 0 10px 60px rgba(0, 0, 0, 0.14);
 	padding: 23px 24px;
 	-webkit-appearance: none;
@@ -673,7 +673,7 @@ hr.wp-block-separator {
 
 .ab-pricing-table-price,
 .ab-pricing-table-title {
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+	font-family: museo-sans, sans-serif;
 }
 
 .ab-pricing-table-price strong {
