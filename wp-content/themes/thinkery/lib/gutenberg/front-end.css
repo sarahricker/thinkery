@@ -619,6 +619,11 @@ hr.wp-block-separator {
 /* Atomic Blocks
 --------------------------------------------- */
 
+.ab-block-container {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
 .ab-block-post-grid .is-grid,
 .ab-block-post-grid .is-list .entry {
 	grid-gap: 0 4.5em;
