@@ -177,6 +177,16 @@ genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 
+/**
+ * Force posts layout
+ */
+function thinkery_posts_layout() {
+	if ( is_singular( array( 'post' ) ) ) {
+		return 'content-sidebar';
+	}
+}
+add_filter( 'genesis_site_layout', 'thinkery_posts_layout' );
+
 
 /**
  * Register new widgets
