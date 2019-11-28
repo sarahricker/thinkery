@@ -1,8 +1,4 @@
 wp.blocks.registerBlockStyle( 'core/heading', {
-    name: 'entry-title',
-    label: 'Heading Style: Entry Title'
-} );
-wp.blocks.registerBlockStyle( 'core/heading', {
     name: 'h1',
     label: 'Heading Style: h1'
 } );

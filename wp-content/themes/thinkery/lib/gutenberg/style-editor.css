@@ -90,30 +90,28 @@ h6 {
 	margin: 0 0 20px;
 }
 
-h1 {
+h1, .is-style-h1 {
+	font-size: 64px;
+	margin-bottom: 20px;
+}
+
+h2,.is-style-h2 {
+	font-size: 40px;
+}
+
+h3, .is-style-h3 {
 	font-size: 30px;
 }
 
-h2 {
-	font-size: 27px;
-}
-
-h3 {
-	font-size: 24px;
-	font-weight: 600;
-}
-
-h4 {
+h4, .is-style-h4 {
 	font-size: 20px;
-	font-weight: 600;
-	margin-top: 40px;
 }
 
-h5 {
+h5, .is-style-h5 {
 	font-size: 18px;
 }
 
-h6 {
+h6, .is-style-h6 {
 	font-size: 16px;
 }
 
