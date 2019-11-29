@@ -189,6 +189,29 @@ add_filter( 'genesis_site_layout', 'thinkery_posts_layout' );
 
 
 /**
+ * Add custom body class to the head
+ */
+function thinkery_programs_body_class( $classes ) {
+	$classes[] = 'genesis-title-hidden';
+	return $classes;
+}
+
+/**
+ * Hide Title + entry content on custom post types
+ */
+function thinkery_cpt_title_hide() {
+	if ( is_singular( array( 'program', 'exhibit' ) ) ) {
+		add_filter( 'body_class', 'thinkery_programs_body_class' );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+	}
+}
+add_action( 'wp', 'thinkery_cpt_title_hide' );
+
+
+/**
  * Register new widgets
  */
 function thinkery_widgets_init() {
