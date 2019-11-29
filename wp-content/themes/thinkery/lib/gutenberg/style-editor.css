@@ -282,6 +282,31 @@ p.has-background.light-text a:hover {
 	font-size: 48px;
 }
 
+.wp-block-cover-image.has-background-dim:before,
+.wp-block-cover.has-background-dim:before {
+	mix-blend-mode: multiply;
+}
+
+.ab-block-container .ab-container-image:not(.has-background-dim),
+.ab-block-container .wp-block-cover.has-background-dim,
+.ab-block-container .wp-block-cover.has-background-dim-10,
+.ab-block-container .wp-block-cover.has-background-dim-20,
+.ab-block-container .wp-block-cover.has-background-dim-30,
+.ab-block-container .wp-block-cover.has-background-dim-40,
+.ab-block-container .wp-block-cover.has-background-dim-50,
+.ab-block-container .wp-block-cover.has-background-dim-60,
+.ab-block-container .wp-block-cover.has-background-dim-70,
+.ab-block-container .wp-block-cover.has-background-dim-80,
+.ab-block-container .wp-block-cover.has-background-dim-90,
+.ab-block-container .wp-block-cover.has-background-dim-100 {
+	opacity: unset; /*  this added extra opacity, core/cover opacity is on ::before pseudo element */
+}
+
+.wp-block-cover, .wp-block-cover-image {
+	min-height: 0;
+	padding: 0 30px;
+}
+
 /* Figcaption
 ---------------------------------------------------------------------------- */
 
