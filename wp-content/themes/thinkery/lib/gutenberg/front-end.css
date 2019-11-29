@@ -202,6 +202,22 @@
 	transform: translate3d(0, -3px, 0);
 }
 
+
+/* Group (for shifting embeds up over title block)
+--------------------------------------------- */
+
+.is-style-shift-up-150 {
+	margin-top: -150px;
+	position: relative;
+	top: 0;
+	border: 6px solid #db3e3d;
+	border-radius: 4px;
+	margin-bottom: 30px;
+}
+.is-style-shift-up-150 .wp-block-embed {
+	margin-bottom: 0;
+}
+
 /* Media and Image Blocks
 --------------------------------------------- */
 

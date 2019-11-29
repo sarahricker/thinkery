@@ -22,3 +22,7 @@ wp.blocks.registerBlockStyle( 'core/heading', {
     name: 'h6',
     label: 'Heading Style: h6'
 } );
+wp.blocks.registerBlockStyle( 'core/group', {
+    name: 'shift-up-150',
+    label: 'Shift embed up (-150px)'
+} );
