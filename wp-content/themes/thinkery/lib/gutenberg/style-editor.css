@@ -526,9 +526,9 @@ hr.wp-block-separator.is-style-dots {
 	margin-top: -150px;
 	position: relative;
 	top: 0;
-	border: 6px solid #db3e3d;
-	border-radius: 4px;
 	margin-bottom: 30px;
+	box-shadow: 0 0px 10px #000000;
+	position: relative;
 	z-index: 20;
 }
 .is-style-shift-up-150 .wp-block-embed {
