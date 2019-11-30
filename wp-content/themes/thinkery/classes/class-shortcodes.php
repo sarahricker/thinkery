@@ -5,6 +5,7 @@
  * @package Genesis Sample
  */
 
+namespace Thinkery;
 
 /**
  * Build the shortcode class

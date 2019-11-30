@@ -51,7 +51,7 @@ require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
 
 // Load our shortcodes.
-Shortcodes::init();
+Thinkery\Shortcodes::init();
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 /**
