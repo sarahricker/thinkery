@@ -537,3 +537,25 @@ hr.wp-block-separator.is-style-dots {
 .is-style-shift-up-150 [data-block] {
 	margin: 0;
 }
+
+/* CO Blocks
+--------------------------------------------- */
+ol.flickity-page-dots li::before,
+.editor-block-list__block ul li.coblocks-gallery--item::before,
+.editor-block-list__block  ul li.wp-block-coblocks-gallery-collage__item::before  {
+	display: none;
+}
+
+
+/* Ultimate Addons for Gutenberg
+--------------------------------------------- */
+
+.uagb-post__title {
+	text-align: center;
+}
+.uagb-post__image:before {
+	mix-blend-mode: multiply;
+}
+ul.slick-dots li:before {
+	display: none;
+}

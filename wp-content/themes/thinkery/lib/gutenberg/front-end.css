@@ -745,8 +745,49 @@ hr.wp-block-separator {
 		position: static;
 		width: 100%;
 	}
-
 }
+
+
+
+/* CO Blocks
+--------------------------------------------- */
+ol.flickity-page-dots li::before,
+.entry-content ul li.coblocks-gallery--item::before,
+.entry-content ul li.wp-block-coblocks-gallery-collage__item::before  {
+	display: none;
+}
+
+.flickity-button,
+.flickity-button:hover,
+.flickity-button:focus {
+	background: none;
+	border-radius: 0;
+}
+.flickity-button-icon {
+	fill: #ffffff;
+}
+
+.coblocks-lightbox__arrow,
+.coblocks-lightbox__arrow:hover,
+.coblocks-lightbox__arrow:focus {
+	background: none;
+	box-shadow: none;
+}
+
+/* Ultimate Addons for Gutenberg
+--------------------------------------------- */
+
+.uagb-post__title {
+	text-align: center;
+}
+.uagb-post__image:before {
+	mix-blend-mode: multiply;
+}
+ul.slick-dots li:before {
+	display: none;
+}
+
+
 
 /* Media Queries
 --------------------------------------------- */
