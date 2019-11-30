@@ -2130,7 +2130,10 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 
 	.content {
 		float: left;
-		width: 65%;
+		width: 83%;
+	}
+	.blog .content {
+		width: 100%;
 	}
 
 	.sidebar-content .content {
@@ -2145,6 +2148,11 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 
 	/* Sidebar
 	--------------------------------------------- */
+	.single-post .content {
+		float: left;
+		width: 65%;
+		margin-right: 5%;
+	}
 
 	.sidebar {
 		float: right;
