@@ -47,6 +47,8 @@ function genesis_sample_dequeue_skip_links() {
 remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
 remove_action( 'genesis_header', 'genesis_do_header' );
 remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
+remove_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
+
 
 // Removes navigation.
 remove_theme_support( 'genesis-menus' );

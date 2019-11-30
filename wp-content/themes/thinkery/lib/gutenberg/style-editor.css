@@ -90,30 +90,28 @@ h6 {
 	margin: 0 0 20px;
 }
 
-h1 {
+h1, .is-style-h1 {
+	font-size: 64px;
+	margin-bottom: 20px;
+}
+
+h2,.is-style-h2 {
+	font-size: 40px;
+}
+
+h3, .is-style-h3 {
 	font-size: 30px;
 }
 
-h2 {
-	font-size: 27px;
-}
-
-h3 {
-	font-size: 24px;
-	font-weight: 600;
-}
-
-h4 {
+h4, .is-style-h4 {
 	font-size: 20px;
-	font-weight: 600;
-	margin-top: 40px;
 }
 
-h5 {
+h5, .is-style-h5 {
 	font-size: 18px;
 }
 
-h6 {
+h6, .is-style-h6 {
 	font-size: 16px;
 }
 
@@ -282,6 +280,31 @@ p.has-background.light-text a:hover {
 .wp-block-cover .wp-block-cover-text {
 	color: #fff;
 	font-size: 48px;
+}
+
+.wp-block-cover-image.has-background-dim:before,
+.wp-block-cover.has-background-dim:before {
+	mix-blend-mode: multiply;
+}
+
+.ab-block-container .ab-container-image:not(.has-background-dim),
+.ab-block-container .wp-block-cover.has-background-dim,
+.ab-block-container .wp-block-cover.has-background-dim-10,
+.ab-block-container .wp-block-cover.has-background-dim-20,
+.ab-block-container .wp-block-cover.has-background-dim-30,
+.ab-block-container .wp-block-cover.has-background-dim-40,
+.ab-block-container .wp-block-cover.has-background-dim-50,
+.ab-block-container .wp-block-cover.has-background-dim-60,
+.ab-block-container .wp-block-cover.has-background-dim-70,
+.ab-block-container .wp-block-cover.has-background-dim-80,
+.ab-block-container .wp-block-cover.has-background-dim-90,
+.ab-block-container .wp-block-cover.has-background-dim-100 {
+	opacity: unset; /*  this added extra opacity, core/cover opacity is on ::before pseudo element */
+}
+
+.wp-block-cover, .wp-block-cover-image {
+	min-height: 0;
+	padding: 0 30px;
 }
 
 /* Figcaption
@@ -495,4 +518,44 @@ hr.wp-block-separator.is-style-dots {
 
 .wp-block[data-align="full"] .wp-block-columns > .editor-inner-blocks {
 	padding: 0 30px;
+}
+
+/* Group (for shifting embeds up over title block)
+--------------------------------------------- */
+.is-style-shift-up-150 {
+	margin-top: -150px;
+	position: relative;
+	top: 0;
+	margin-bottom: 30px;
+	box-shadow: 0 0px 10px #000000;
+	position: relative;
+	z-index: 20;
+}
+.is-style-shift-up-150 .wp-block-embed {
+	margin-bottom: 0;
+}
+.is-style-shift-up-150 [data-block] {
+	margin: 0;
+}
+
+/* CO Blocks
+--------------------------------------------- */
+ol.flickity-page-dots li::before,
+.editor-block-list__block ul li.coblocks-gallery--item::before,
+.editor-block-list__block  ul li.wp-block-coblocks-gallery-collage__item::before  {
+	display: none;
+}
+
+
+/* Ultimate Addons for Gutenberg
+--------------------------------------------- */
+
+.uagb-post__title {
+	text-align: center;
+}
+.uagb-post__image:before {
+	mix-blend-mode: multiply;
+}
+ul.slick-dots li:before {
+	display: none;
 }

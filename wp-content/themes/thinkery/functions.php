@@ -116,6 +116,17 @@ function genesis_sample_enqueue_scripts_styles() {
 }
 
 add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
+
+function thinkery_gutenberg_enqueue() {
+	wp_enqueue_script(
+		'thinkery-gutenberg-script',
+		get_stylesheet_directory_uri() . '/js/gutenberg.js',
+		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ),
+		'1.0.0'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'thinkery_gutenberg_enqueue' );
+
 /**
  * Add desired theme supports.
  *
@@ -165,6 +176,39 @@ unregister_sidebar( 'sidebar-alt' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+/**
+ * Force posts layout
+ */
+function thinkery_posts_layout() {
+	if ( is_singular( array( 'post' ) ) ) {
+		return 'content-sidebar';
+	}
+}
+add_filter( 'genesis_site_layout', 'thinkery_posts_layout' );
+
+
+/**
+ * Add custom body class to the head
+ */
+function thinkery_programs_body_class( $classes ) {
+	$classes[] = 'genesis-title-hidden';
+	return $classes;
+}
+
+/**
+ * Hide Title + entry content on custom post types
+ */
+function thinkery_cpt_title_hide() {
+	if ( is_singular( array( 'program', 'exhibit' ) ) ) {
+		add_filter( 'body_class', 'thinkery_programs_body_class' );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+		remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+	}
+}
+add_action( 'wp', 'thinkery_cpt_title_hide' );
 
 
 /**

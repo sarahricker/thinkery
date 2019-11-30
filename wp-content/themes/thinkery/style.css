@@ -235,36 +235,27 @@ h6 {
 	margin: 0 0 20px;
 }
 
-h1 {
+h1, .is-style-h1 {
+	font-size: 64px;
+}
+
+h2,.is-style-h2 {
+	font-size: 40px;
+}
+
+h3, .is-style-h3 {
 	font-size: 30px;
 }
 
-h2 {
-	font-size: 27px;
-}
-
-h3 {
-	font-size: 24px;
-}
-
-h4 {
+h4, .is-style-h4 {
 	font-size: 20px;
 }
 
-.entry-content h3,
-.entry-content h4 {
-	font-weight: 600;
-}
-
-.entry-content h4 {
-	margin-top: 40px;
-}
-
-h5 {
+h5, .is-style-h5 {
 	font-size: 18px;
 }
 
-h6 {
+h6, .is-style-h6 {
 	font-size: 16px;
 }
 
@@ -578,7 +569,12 @@ th:last-child {
 .site-inner {
 	clear: both;
 	margin: 0 auto;
-	padding: 60px 30px 0;
+	padding: 60px 5% 0;
+}
+
+.content-sidebar-wrap {
+	max-width: 1170px;
+	margin: 0 auto;
 }
 
 
@@ -679,7 +675,7 @@ th:last-child {
 }
 
 .entry-title {
-	font-size: 65px;
+	font-size: 64px;
 	margin-bottom: 20px;
 }
 
@@ -869,14 +865,14 @@ img.alignright,
 }
 .header-info-bar {
 	background-color: #b43231;
-	padding: 13px 30px;
+	padding: 13px 5%;
 }
 .header-info-bar * {
 	color: #ffffff;
 	text-decoration: none;
 }
 .header-info-bar .wrap {
-	max-width: 1168px;
+	max-width: 1170px;
 	margin: 0 auto;
 	font-size: 14px;
 	font-weight: bold;
@@ -911,14 +907,14 @@ img.alignright,
 
 .site-header {
 	background-color: #db3e3d;
+	padding: 15px 5%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-	padding: 15px 30px;
 }
 .site-header .wrap {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1168px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 .search-form-input,
@@ -1382,8 +1378,8 @@ img.alignright,
 /* Entry Content
 --------------------------------------------- */
 
-.entry {
-	margin-bottom: 40px;
+.page-template-blocks .entry {
+	margin-bottom: 0;
 }
 
 .entry-content ol,
@@ -1581,14 +1577,14 @@ p.entry-meta {
 
 .footer-widgets {
 	background-color: #db3e3d;
+	padding: 60px 5%;
 	clear: both;
-	padding: 60px 30px;
 	color: #ffffff;
 }
 
 .footer-widgets .wrap {
 	margin: 0 auto;
-	max-width: 1168px;
+	max-width: 1170px;
 }
 
 .footer-widget-area {
@@ -1972,7 +1968,7 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 	}
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1290px) {
 
 	/* Site Header
 	--------------------------------------------- */
@@ -2128,12 +2124,6 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 		padding-right: 15px;
 	}
 
-	/* Site-Inner
-	--------------------------------------------- */
-
-	.site-inner {
-		max-width: 1140px;
-	}
 
 	/* Content
 	--------------------------------------------- */
@@ -2178,8 +2168,8 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 
 	.after-entry {
 		padding: 40px 60px;
+		margin-top: 60px;
 	}
-
 	/* Column Classes
 	--------------------------------------------- */
 
@@ -2242,7 +2232,6 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 	.archive-description,
 	.author-box,
 	.comment-respond,
-	.entry,
 	.entry-comments,
 	.entry-pings {
 		margin-bottom: 60px;
