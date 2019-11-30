@@ -49,6 +49,8 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.p
 // Include custom classes
 require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
+require_once get_stylesheet_directory() . '/classes/class-block-area.php';
+require_once get_stylesheet_directory() . '/classes/class-block-area-widget.php';
 
 // Load our shortcodes.
 Thinkery\Shortcodes::init();
@@ -225,6 +227,24 @@ function thinkery_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'thinkery_widgets_init' );
+
+/**
+ * Add our Block Area Widget
+ */
+function thinkery_add_block_area_widget() {
+	register_widget( 'Thinkery\Block_Widget' );
+}
+add_action( 'widgets_init', 'thinkery_add_block_area_widget');
+
+/**
+ * Add our Reusable Blocks to Admin Menu
+ */
+function thinkery_add_reusable_blocks_ui() {
+	add_menu_page( __( 'Reusable Blocks', 'reusable-blocks-ui' ), __( 'Reusable Blocks', 'reusable-blocks-ui' ), 'edit_posts', 'edit.php?post_type=wp_block', '', 'dashicons-editor-table', 22 );
+}
+add_action( 'admin_menu', 'thinkery_add_reusable_blocks_ui' );
+
+
 
 // Adds header info bar.
 add_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
