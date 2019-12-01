@@ -577,6 +577,10 @@ th:last-child {
 	margin: 0 auto;
 }
 
+.blog .site-inner,
+.archive .site-inner {
+	background: #e7ecf3;
+}
 
 /* Common Classes
 ---------------------------------------------------------------------------- */
@@ -699,6 +703,40 @@ th:last-child {
 .genesis-title-hidden .site-inner {
 	padding-top: 0;
 }
+
+.archive article,
+.blog article {
+	background-color: #ffffff;
+	box-shadow: 0 0px 10px rgba(0,0,0,0.1);
+	margin-bottom: 32px;
+}
+
+.archive article:hover,
+.archive article:focus,
+.blog article:hover,
+.blog article:focus {
+	transform: translate3d(0, -3px, 0);
+	transition: background-color 0.25s ease-in, border-color ease-in, transform 0.75s cubic-bezier(0.44, 0.51, 0.24, 0.99), box-shadow 1s cubic-bezier(0.44, 0.51, 0.24, 0.99);
+}
+
+.archive article .entry-header,
+.blog article .entry-header {
+	margin: 16px;
+}
+
+.archive article .entry-meta,
+.blog article .entry-meta {
+	margin-bottom: 10px;
+}
+
+.archive article .entry-title,
+.blog article .entry-title {
+	font-size: 24px;
+	font-family: museo-sans, sans-serif;
+	font-weight: 700;
+	padding-bottom: 70px;
+}
+
 
 /* WordPress
 --------------------------------------------- */
@@ -1447,6 +1485,9 @@ img.alignright,
 p.entry-meta {
 	font-size: 16px;
 	margin-bottom: 0;
+	font-family: museo-sans, sans-serif;
+	font-weight: 700;
+	color: #db3e3d;
 }
 
 .entry-header .entry-meta {
