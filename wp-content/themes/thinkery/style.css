@@ -577,6 +577,13 @@ th:last-child {
 	margin: 0 auto;
 }
 
+.archive-hero {
+	width: 83%;
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0 5% 0;
+}
+
 .blog .site-inner,
 .archive .site-inner {
 	background: #e7ecf3;

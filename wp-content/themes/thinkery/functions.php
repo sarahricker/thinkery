@@ -51,9 +51,14 @@ require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
 require_once get_stylesheet_directory() . '/classes/class-block-area.php';
 require_once get_stylesheet_directory() . '/classes/class-block-area-widget.php';
+require_once get_stylesheet_directory() . '/classes/class-archive-hero-block-area.php';
 
 // Load our shortcodes.
 Thinkery\Shortcodes::init();
+
+// Load BLock Area Hero
+Thinkery\Archive_Header::init();
+
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 /**

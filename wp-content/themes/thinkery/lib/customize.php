@@ -131,7 +131,8 @@ function genesis_sample_customizer_register( $wp_customize ) {
 		'post_type' => 'block_area',
 	];
 	$block_area_list = get_posts( $args );
-	$block_areas = [];
+	$block_areas[0] = 'Select Block Area';
+
 	foreach( $block_area_list as $block_area ) {
 		$key = $block_area->post_name;
 		$block_areas[$block_area->ID] = $key;
