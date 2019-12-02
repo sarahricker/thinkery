@@ -168,6 +168,7 @@ a {
 	color: #0073e5;
 	text-decoration: underline;
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	font-weight: 700;
 }
 
 a:focus,
@@ -860,6 +861,10 @@ th:last-child {
 	padding-bottom: 70px;
 }
 
+.single article .entry-title {
+	font-size: 44px;
+}
+
 
 /* WordPress
 --------------------------------------------- */
@@ -890,8 +895,7 @@ a.alignright {
 }
 
 img.centered,
-.aligncenter,
-.singular-image {
+.aligncenter {
 	display: block;
 	margin: 0 auto 30px;
 }
