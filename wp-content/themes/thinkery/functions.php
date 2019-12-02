@@ -47,17 +47,19 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Include custom classes
-require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
 require_once get_stylesheet_directory() . '/classes/class-block-area.php';
 require_once get_stylesheet_directory() . '/classes/class-block-area-widget.php';
+
+// Include custom classes that require init
+require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-archive-hero-block-area.php';
+require_once get_stylesheet_directory() . '/classes/class-blog-toolbar.php';
 
-// Load our shortcodes.
+// Init our classes
 Thinkery\Shortcodes::init();
-
-// Load BLock Area Hero
 Thinkery\Archive_Header::init();
+Thinkery\Blog_Toolbar::init();
 
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
