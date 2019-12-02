@@ -2310,8 +2310,11 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 		float: left;
 		width: 83%;
 	}
-	.blog .content {
+	.blog .content,
+	.archive .content {
 		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.sidebar-content .content {
