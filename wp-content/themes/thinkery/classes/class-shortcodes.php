@@ -5,6 +5,7 @@
  * @package Genesis Sample
  */
 
+namespace Thinkery;
 
 /**
  * Build the shortcode class
@@ -25,6 +26,7 @@ class Shortcodes {
 	public function shortcodes() {
 		add_shortcode( 'thinkery_phone', [ $this, 'do_shortcode_phone' ] );
 		add_shortcode( 'thinkery_address', [ $this, 'do_shortcode_address' ] );
+		add_shortcode( 'thinkery_post_title', [ $this, 'do_shortcode_post_title' ] );
 	}
 
 	/**
@@ -73,5 +75,34 @@ class Shortcodes {
 		);
 
 		return $atts['address'];
+	}
+
+	/**
+	 * Shortcode to show the post title (use in blocks to create dynamic header)
+	 *
+	 * @return string       The post title of the curent post/page.
+	 */
+
+	public function do_shortcode_post_title( $atts ) {
+		$atts = shortcode_atts(
+			array(
+				'id' => get_queried_object_id(),
+			),
+			$atts,
+			'thinkery_title'
+		);
+
+		if ( is_category() || is_tag() || is_tax() || is_post_type_archive() ) {
+
+			return get_the_archive_title( absint( $atts['id'] ) );
+
+		} elseif ( is_author() ) {
+
+			return get_the_author_meta( 'user_nicename', absint( $atts['id'] ) );
+
+		} else {
+
+			return get_the_title( absint( $atts['id'] ) );
+		}
 	}
 }
