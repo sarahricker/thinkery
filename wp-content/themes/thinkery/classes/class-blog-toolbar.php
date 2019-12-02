@@ -25,7 +25,7 @@ class Blog_Toolbar {
 	 * Load Block Area
 	 */
 	public function load_blog_toolbar() {
-		if ( !is_front_page() && is_home() ) {
+		if ( !is_front_page() && is_home() || is_archive() ) {
 			// Load our blog toolbar before the loop
 			$this->blog_toolbar_area();
 		}
@@ -47,6 +47,7 @@ class Blog_Toolbar {
 							'show_count'       => 0,
 							'orderby'          => 'name',
 							'echo'             => 0,
+							'selected'         => 0,
 						);
 						?>
 
