@@ -148,6 +148,44 @@ function genesis_sample_customizer_register( $wp_customize ) {
 			)
 		)
 	);
+
+	/**
+	 * Add options to customize the 404 Page (Block area selector)
+	 *
+	 */
+	$wp_customize->add_setting(
+		'404_page_block_area' , array(
+			'transport' => 'refresh',
+		)
+	);
+	$wp_customize->add_section( '404-page',
+		array(
+			'title' => esc_html_x( '404 Page', 'customizer section title', 'thinkery' ),
+		)
+	);
+	// Get Block Area Posts to populate select option
+	$args = [
+		'numberposts' => '-1',
+		'post_type' => 'block_area',
+	];
+	$block_area_list = get_posts( $args );
+	$block_areas[0] = 'Select Block Area';
+
+	foreach( $block_area_list as $block_area ) {
+		$key = $block_area->post_name;
+		$block_areas[$block_area->ID] = $key;
+	}
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, '404_page_block_area', array(
+				'section'       => '404-page',
+				'label'         => esc_html__( '404 Page Block Area', 'thinkery' ),
+				'description'   => esc_html__( 'Select the block area to show on the 404 page.', 'thinkery' ),
+				'type'           => 'select',
+				'choices'        => $block_areas,
+			)
+		)
+	);
 }
 
 /**
