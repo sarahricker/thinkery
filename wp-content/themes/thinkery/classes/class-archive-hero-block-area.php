@@ -31,7 +31,7 @@ class Archive_Header {
 	 */
 	public function load_block_area() {
 
-		if ( is_singular() ) {
+		if ( is_singular() || is_search() || is_404() ) {
 			return;
 		}
 
