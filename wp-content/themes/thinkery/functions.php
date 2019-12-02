@@ -47,11 +47,20 @@ require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.p
 require_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php';
 
 // Include custom classes
-require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
 require_once get_stylesheet_directory() . '/classes/class-thinkery-search-form.php';
+require_once get_stylesheet_directory() . '/classes/class-block-area.php';
+require_once get_stylesheet_directory() . '/classes/class-block-area-widget.php';
 
-// Load our shortcodes.
-Shortcodes::init();
+// Include custom classes that require init
+require_once get_stylesheet_directory() . '/classes/class-shortcodes.php';
+require_once get_stylesheet_directory() . '/classes/class-archive-hero-block-area.php';
+require_once get_stylesheet_directory() . '/classes/class-blog-toolbar.php';
+
+// Init our classes
+Thinkery\Shortcodes::init();
+Thinkery\Archive_Header::init();
+Thinkery\Blog_Toolbar::init();
+
 
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 /**
@@ -189,6 +198,59 @@ add_filter( 'genesis_site_layout', 'thinkery_posts_layout' );
 
 
 /**
+ * Archive Post Class
+ *
+ * Breaks the posts into three columns
+ *
+ * @param array $classes
+ * @return array
+ */
+function thinkery_archive_post_class( $classes ) {
+
+	if( is_singular() ) {
+		return $classes;
+	}
+
+	global $wp_query;
+	if( ! $wp_query->is_main_query() ) {
+		return $classes;
+	}
+
+	$classes[] = 'one-third';
+	if( 0 == $wp_query->current_post % 3 ) {
+		$classes[] = 'first';
+	}
+	return $classes;
+}
+add_filter( 'post_class', 'thinkery_archive_post_class' );
+
+// Removes the default post image.
+remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 1 );
+
+
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
+function thinkery_post_info_filter( $post_info ) {
+	if ( !is_singular() ) {
+		$post_info = '[post_date]';
+	}
+	return $post_info;
+}
+remove_action( 'genesis_entry_header', 'genesis_post_info', 12);
+add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
+add_filter( 'genesis_post_info', 'thinkery_post_info_filter' );
+
+// Remove entry content on blog and archives.
+function thinkery_remove_entry_content_archives() {
+	if (is_home() || is_archive() || is_search() ) {
+		remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
+		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+	}
+}
+add_action ( 'genesis_before_entry' , 'thinkery_remove_entry_content_archives' );
+
+
+/**
  * Add custom body class to the head
  */
 function thinkery_programs_body_class( $classes ) {
@@ -225,6 +287,24 @@ function thinkery_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'thinkery_widgets_init' );
+
+/**
+ * Add our Block Area Widget
+ */
+function thinkery_add_block_area_widget() {
+	register_widget( 'Thinkery\Block_Widget' );
+}
+add_action( 'widgets_init', 'thinkery_add_block_area_widget');
+
+/**
+ * Add our Reusable Blocks to Admin Menu
+ */
+function thinkery_add_reusable_blocks_ui() {
+	add_menu_page( __( 'Reusable Blocks', 'reusable-blocks-ui' ), __( 'Reusable Blocks', 'reusable-blocks-ui' ), 'edit_posts', 'edit.php?post_type=wp_block', '', 'dashicons-editor-table', 22 );
+}
+add_action( 'admin_menu', 'thinkery_add_reusable_blocks_ui' );
+
+
 
 // Adds header info bar.
 add_action( 'genesis_before_header', 'thinkery_info_bar', 12 );
