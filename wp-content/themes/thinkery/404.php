@@ -17,15 +17,20 @@ remove_action( 'genesis_loop', 'genesis_do_loop' );
  */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
-/**
- * Remove custom hero header
- */
-remove_action( 'genesis_before_content_sidebar_wrap', 'thinkery_hero_header', 1 );
 
-/**
- * Output a 404 "Not Found" heading.
- */
-add_action( 'genesis_loop', 'genesis_404_heading' );
+
+// Get chosen 404 Block Area from Customizer > 404 Page
+$block_area = get_theme_mod( '404_page_block_area' );
+
+// Load our custom block area if set, otherwise print out fallback 404 content
+if ( ! empty( $block_area ) ) {
+	add_action( 'genesis_after_content', 'thinkery_404_block_area' );
+	add_filter( 'body_class', 'thinkery_programs_body_class' );
+} else {
+	add_action( 'genesis_loop', 'genesis_404_heading' );
+	add_action( 'genesis_loop', 'genesis_404_content' );
+}
+
 /**
  * Output a 404 "Not Found" heading.
  *
@@ -57,16 +62,6 @@ function genesis_404_heading() {
 		]
 	);
 
-}
-
-// Get chosen 404 Block Area from Customizer > 404 Page
-$block_area = get_theme_mod( '404_page_block_area' );
-
-// Load our custom block area if set, otherwise print out fallback 404 content
-if ( ! empty( $block_area ) ) {
-	add_action( 'genesis_after_content', 'thinkery_404_block_area' );
-} else {
-	add_action( 'genesis_loop', 'genesis_404_content' );
 }
 
 /**
@@ -113,5 +108,14 @@ function thinkery_404_block_area() {
 	$block_area = get_theme_mod( '404_page_block_area', true );
 	\Thinkery\block_area()->show( $block_area );
 }
+
+/**
+ * Add custom body class to the head
+ */
+function thinkery_404_body_class( $classes ) {
+	$classes[] = 'genesis-title-hidden';
+	return $classes;
+}
+
 
 genesis();
