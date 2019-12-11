@@ -600,3 +600,13 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
 	return $title;
 }
 add_filter( 'tribe_get_events_title', 'tribe_alter_event_archive_titles', 11, 2 );
+
+
+//Added to allow SVG upload to Media Library
+function add_file_types_to_uploads($file_types){
+$new_filetypes = array();
+$new_filetypes['svg'] = 'image/svg+xml';
+$file_types = array_merge($file_types, $new_filetypes );
+return $file_types;
+}
+add_filter('upload_mimes', 'add_file_types_to_uploads');
