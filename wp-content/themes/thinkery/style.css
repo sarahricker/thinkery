@@ -1777,6 +1777,7 @@ p.entry-meta {
 .footer-widgets a {
 	color: #fff;
 	text-decoration: none;
+	font-weight: 400;
 }
 
 .footer-widgets a:hover,
@@ -1793,6 +1794,22 @@ p.entry-meta {
 	font-size: 20px;
 	max-width: 300px;
 	margin: 0 auto;
+}
+
+.footer-widgets ul.menu:first-of-type > li:first-of-type > a {
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.footer-widgets ul.sub-menu li {
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+
+.widget ul.sub-menu > li:last-of-type {
+	padding-bottom: 0;
 }
 
 /* Site Footer
