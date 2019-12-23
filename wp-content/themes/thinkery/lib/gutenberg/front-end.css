@@ -185,15 +185,15 @@
 }
 
 .site-container .ab-button {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 	font-family: museo-sans, sans-serif;
 	font-weight: 700;
 	transform: translate3d(0, 0, 0);
 }
 
 .site-container .wp-block-button .wp-block-button__link {
-	background-color: #151853;
-	border: solid 2px #151853;
+	background-color: #1b2432;
+	border: solid 2px #1b2432;
 	border: none;
 	border-radius: 0px;
 	color: #ffffff;
@@ -322,7 +322,7 @@
 
 	.wp-block-image.stylized-background::after,
 	.wp-block-media-text .wp-block-media-text__media::after {
-		background-color: #db3e3d;
+		background-color: #c6101c;
 		content: "";
 		display: block;
 		height: 5px;
@@ -555,7 +555,7 @@
 
 .wp-block-image.vertical-caption figcaption a:focus,
 .wp-block-image.vertical-caption figcaption a:hover {
-	color: #db3e3d;
+	color: #c6101c;
 }
 
 @media only screen and (max-width: 800px) {

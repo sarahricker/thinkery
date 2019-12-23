@@ -43,44 +43,34 @@ return [
 	'default-colors'       => $genesis_sample_default_colors,
 	'editor-color-palette' => [
 		[
-			'name'  => __( 'Primary color (Customizer)', 'genesis-sample' ),
-			'slug'  => 'theme-primary',
-			'color' => $genesis_sample_primary_color,
-		],
-		[
-			'name'  => __( 'Accent color (Customizer)', 'genesis-sample' ),
-			'slug'  => 'theme-secondary',
-			'color' => $genesis_sample_accent_color,
-		],
-		[
-			'name'  => __( 'Link color (Customizer)', 'genesis-sample' ),
-			'slug'  => 'theme-link',
-			'color' => $genesis_sample_link_color,
-		],
-		[
 			'name'  => __( 'Thinkery Red', 'genesis-sample' ),
 			'slug'  => 'thinkery-red',
-			'color' => '#db3e3d',
+			'color' => '#c6101c',
 		],
 		[
-			'name'  => __( 'Thinkery Orange', 'genesis-sample' ),
-			'slug'  => 'thinkery-orange',
-			'color' => '#e28413',
-		],
-		[
-			'name'  => __( 'Thinkery Navy Blue', 'genesis-sample' ),
-			'slug'  => 'thinkery-navy-blue',
-			'color' => '#151853',
+			'name'  => __( 'Thinkery Dark Red', 'genesis-sample' ),
+			'slug'  => 'thinkery-dark-red',
+			'color' => '#970c15',
 		],
 		[
 			'name'  => __( 'Thinkery Blue', 'genesis-sample' ),
 			'slug'  => 'thinkery-blue',
-			'color' => '#266dd3',
+			'color' => '#0d7bc5',
 		],
 		[
 			'name'  => __( 'Thinkery Green', 'genesis-sample' ),
 			'slug'  => 'thinkery-green',
-			'color' => '#00b9ae',
+			'color' => '#1d8725',
+		],
+		[
+			'name'  => __( 'Thinkery Pink', 'genesis-sample' ),
+			'slug'  => 'thinkery-pink',
+			'color' => '#d42589',
+		],
+		[
+			'name'  => __( 'Thinkery Yellow', 'genesis-sample' ),
+			'slug'  => 'thinkery-yellow',
+			'color' => '#ffb600',
 		],
 		[
 			'name'  => __( 'Thinkery Dark Grey', 'genesis-sample' ),

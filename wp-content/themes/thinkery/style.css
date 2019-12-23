@@ -400,7 +400,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 	border: 0;
 	border-radius: 0;
 	color: #fff;
@@ -601,7 +601,7 @@ th:last-child {
 	position: relative;
 }
 .blog-toolbar-container-inside i {
-	color: #db3e3d;
+	color: #c6101c;
 	cursor: pointer;
 }
 
@@ -724,7 +724,7 @@ th:last-child {
 	position: absolute;
 	left: 0;
 	bottom: 10px;
-	background-color: #db3e3d;
+	background-color: #c6101c;
 	transition: all 0.5s ease;
 }
 
@@ -736,7 +736,7 @@ th:last-child {
 .search-form-input[type="search"] {
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid #db3e3d;
+	border-bottom: 2px solid #c6101c;
 	padding: 5px 0px;
 	text-transform: lowercase;
 	float: right;
@@ -762,7 +762,7 @@ th:last-child {
 	color: #1b2432;
 }
 .search-form-submit {
-	color: #db3e3d;
+	color: #c6101c;
 	background-color: transparent;
 	width: 40px;
 	height: 40px;
@@ -1029,7 +1029,7 @@ img.alignright,
 	top: 32px;
 }
 .header-info-bar {
-	background-color: #b43231;
+	background-color: #970c15;
 	padding: 13px 5%;
 }
 .header-info-bar * {
@@ -1071,7 +1071,7 @@ img.alignright,
 }
 
 .site-header {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 	padding: 15px 5%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
@@ -1265,7 +1265,7 @@ img.alignright,
 .genesis-nav-menu .sub-menu,
 .genesis-nav-menu .sub-menu a {
 	width: 100%;
-	color: #db3e3d;
+	color: #c6101c;
 }
 
 .genesis-nav-menu .sub-menu a:focus,
@@ -1310,7 +1310,7 @@ img.alignright,
 }
 
 .genesis-nav-menu .menu-item:hover > .sub-menu li:first-child {
-	border-top: 5px solid #e28413;
+	border-top: 5px solid #970c15;
 }
 
 /* Responsive Menu
@@ -1431,7 +1431,7 @@ img.alignright,
 	bottom: 0;
 	left: 0;
 	z-index: 0;
-	background: #db3e3d;
+	background: #c6101c;
 }
 .side-menu .wrap {
 	padding: 15px 30px;
@@ -1567,14 +1567,14 @@ img.alignright,
 }
 .entry-content ol li::before {
 	content: counter(counter) ". ";
-	color: #db3e3d;
+	color: #c6101c;
 	font-weight: bold;
 }
 .entry-content ol ol li::before {
 	content: counters(counter, ".") " ";
 }
 .entry-content ul li:before {
-	color: #db3e3d;
+	color: #c6101c;
 	content: "\2022";
 	font-weight: bold;
 	display: inline-block;
@@ -1619,7 +1619,7 @@ p.entry-meta {
 	margin-bottom: 0;
 	font-family: museo-sans, sans-serif;
 	font-weight: 700;
-	color: #db3e3d;
+	color: #c6101c;
 }
 
 .entry-header .entry-meta {
@@ -1749,7 +1749,7 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 	padding: 60px 5%;
 	clear: both;
 	color: #ffffff;
@@ -1816,7 +1816,7 @@ p.entry-meta {
 ---------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 	font-size: 15px;
 	line-height: 1.5;
 	padding: 30px;
@@ -1865,7 +1865,7 @@ p.entry-meta {
 
 .tribe-events-page-title span.date {
 	font-size: 16px;
-	color: #db3e3d;
+	color: #c6101c;
 	display: block;
 	margin: 8px 0 4px;
 	text-transform: uppercase;
@@ -1960,12 +1960,12 @@ ul.tribe-events-sub-nav li.tribe-events-nav-previous {
 }
 .tribe-events-nav-next a::before {
 	content: "\f054";
-	background-color:  #151853;
+	background-color:  #1b2432;
 	right: 0;
 }
 .tribe-events-nav-previous a:hover::before,
 .tribe-events-nav-next a:hover::before {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 }
 
 .tribe-events-week-grid .tribe-events-nav-pagination {
@@ -2015,7 +2015,7 @@ ul.tribe-events-sub-nav li.tribe-events-nav-previous {
 	color: #c4c5d4;
 }
 .tribe-mini-calendar-wrapper .tribe-mini-calendar-nav span {
-	color: #db3e3d;
+	color: #c6101c;
 	font-family: museo-sans, sans-serif;
 	font-size: 14px;
 	text-transform: capitalize;
@@ -2073,7 +2073,7 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 
 .tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-present,
 .tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-mini-calendar-today {
-	background-color: #db3e3d;
+	background-color: #c6101c;
 }
 
 .tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a:before {
