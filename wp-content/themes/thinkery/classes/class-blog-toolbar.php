@@ -25,6 +25,11 @@ class Blog_Toolbar {
 	 * Load Block Area
 	 */
 	public function load_blog_toolbar() {
+
+		if ( is_archive( 'tribe_events' ) ) {
+			return;
+		}
+
 		if ( !is_front_page() && is_home() || is_archive() || is_search() ) {
 			// Load our blog toolbar before the loop
 			$this->blog_toolbar_area();
