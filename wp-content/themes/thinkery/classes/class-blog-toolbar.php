@@ -25,7 +25,7 @@ class Blog_Toolbar {
 	 * Load Block Area
 	 */
 	public function load_blog_toolbar() {
-		if ( !is_front_page() && is_home() || is_archive() ) {
+		if ( !is_front_page() && is_home() || is_archive() || is_search() ) {
 			// Load our blog toolbar before the loop
 			$this->blog_toolbar_area();
 		}
@@ -37,31 +37,36 @@ class Blog_Toolbar {
 	public function blog_toolbar_area() { ?>
 		<div class="blog-toolbar-container alignfull">
 			<div class="blog-toolbar-container-inside">
-				<div class="category-selector">
-					<i class="fa fa-chevron-down"></i>
-					<form id="category-select" class="category-select" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+				<?php if ( ! is_search() ) { ?>
+					<div class="category-selector">
+						<i class="fa fa-chevron-down"></i>
+						<form id="category-select" class="category-select" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 
-						<?php
-						$args = array(
-							'show_option_none' => __( 'Select Category', 'thinkery' ),
-							'show_count'       => 0,
-							'orderby'          => 'name',
-							'echo'             => 0,
-							'selected'         => 0,
-						);
-						?>
+							<?php
+							$args = array(
+								'show_option_none' => __( 'Select Category', 'thinkery' ),
+								'show_count'       => 0,
+								'orderby'          => 'name',
+								'echo'             => 0,
+								'selected'         => 0,
+							);
+							?>
 
-						<?php $select  = wp_dropdown_categories( $args ); ?>
-						<?php $replace = "<select$1 onchange='return this.form.submit()'>"; ?>
-						<?php $select  = preg_replace( '#<select([^>]*)>#', $replace, $select ); ?>
+							<?php $select  = wp_dropdown_categories( $args ); ?>
+							<?php $replace = "<select$1 onchange='return this.form.submit()'>"; ?>
+							<?php $select  = preg_replace( '#<select([^>]*)>#', $replace, $select ); ?>
 
-						<?php echo $select; ?>
-						<noscript>
-							<input type="submit" value="View" />
-						</noscript>
+							<?php echo $select; ?>
+							<noscript>
+								<input type="submit" value="View" />
+							</noscript>
 
-					</form>
-				</div>
+						</form>
+					</div>
+				<?php } ?>
+				<?php if ( is_search() ) {
+					echo '<span class="search-text">Search Again</span>';
+				}?>
 				<?php get_search_form();?>
 			</div>
 		</div>
