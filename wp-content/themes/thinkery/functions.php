@@ -173,7 +173,8 @@ function genesis_sample_post_type_support() {
 
 // Adds image sizes.
 add_image_size( 'sidebar-featured', 75, 75, true );
-add_image_size( 'genesis-singular-images', 702, 526, true );
+add_image_size( 'genesis-singular-images', 701,368, true );
+
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
@@ -248,6 +249,31 @@ function thinkery_remove_entry_content_archives() {
 	}
 }
 add_action ( 'genesis_before_entry' , 'thinkery_remove_entry_content_archives' );
+
+
+/**
+ * Define a default post thumbnail
+ */
+function thinkery_default_image_fallback($output, $args) {
+	global $post;
+	if( $output || $args['size'] == 'full' )
+		return $output;
+
+	$thumbnail = CHILD_URL.'/images/default-thinkery.jpg';
+
+	switch($args['format']) {
+		case 'html' :
+			return '<img src="'.$thumbnail.'" class="attachment-'. $args['size'] .'" alt="'. get_the_title($post->ID) .'" />';
+			break;
+		case 'url' :
+			return $thumbnail;
+			break;
+		default :
+			return $output;
+			break;
+	}
+}
+add_filter('genesis_get_image', 'thinkery_default_image_fallback', 10, 2);
 
 
 /**
