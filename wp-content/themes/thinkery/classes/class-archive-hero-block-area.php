@@ -18,10 +18,12 @@ class Archive_Header {
 	public static function init() {
 		$self = new self();
 
-		// Get chosen Block Area from Customizer > Blog Page Header Block Area
-		$block_area = get_theme_mod( 'blog_header_block_area' );
+		// Get chosen Block Areas from Customizer
+		$block_area_blog = get_theme_mod( 'blog_header_block_area' );
+		$block_area_search = get_theme_mod( 'search_page_block_area' );
 
-		if ( ! empty( $block_area ) ) {
+
+		if ( $block_area_blog || $block_area_search ) {
 			add_action( 'genesis_after_header', [ $self, 'load_block_area' ] );
 		}
 	}
@@ -31,7 +33,7 @@ class Archive_Header {
 	 */
 	public function load_block_area() {
 
-		if ( is_singular() || is_search() || is_404() ) {
+		if ( is_singular() || is_404() ) {
 			return;
 		}
 
@@ -50,18 +52,23 @@ class Archive_Header {
 		// Remove Title and Description on Blog Template Page
 		remove_action( 'genesis_before_loop', 'genesis_do_blog_template_heading' );
 
-		// Load our custom block area if set, otherwise fallback to default entry header
-		$this->blog_header_block_area();
+		// Load our custom block area if set
+		$this->page_header_block_area();
 	}
 
 	/**
 	 * Output the chosen block area.
 	 */
-	public function blog_header_block_area() {
+	public function page_header_block_area() {
 		if ( ! class_exists( '\Thinkery\Block_Area' ) ) {
 			return;
 		}
-		$block_area = get_theme_mod( 'blog_header_block_area', true );
+		if ( is_search() ) {
+			$block_area = get_theme_mod( 'search_page_block_area', true );
+		} else {
+			$block_area = get_theme_mod( 'blog_header_block_area', true );
+		}
+
 		echo '<div class="archive-hero">';
 		\Thinkery\block_area()->show( $block_area );
 		echo '</div>';

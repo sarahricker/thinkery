@@ -100,6 +100,11 @@ class Shortcodes {
 
 			return get_the_author_meta( 'user_nicename', absint( $atts['id'] ) );
 
+		} elseif ( is_search() ) {
+
+			$search_query = get_search_query();
+			return 'Search results for: <span class="search-results">' . $search_query . '</span>';
+
 		} else {
 
 			return get_the_title( absint( $atts['id'] ) );
