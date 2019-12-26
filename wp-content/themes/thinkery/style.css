@@ -588,6 +588,10 @@ th:last-child {
 	max-width: 1170px;
 	padding: 0 5% 0;
 }
+.archive-hero .search-results {
+	font-style: italic;
+	display: block;
+}
 
 .blog-toolbar-container {
 	padding: 4px 5%;
@@ -603,6 +607,10 @@ th:last-child {
 .blog-toolbar-container-inside i {
 	color: #c6101c;
 	cursor: pointer;
+}
+
+.blog-toolbar-container-inside .search-text {
+	font-weight: 700;
 }
 
 .blog-toolbar-container-inside .category-selector {
@@ -640,10 +648,12 @@ th:last-child {
 }
 
 .blog .site-inner,
-.archive .site-inner {
+.archive .site-inner,
+.search .site-inner {
 	background: #e7ecf3;
 	padding-bottom: 40px;
 }
+
 
 /* Common Classes
 ---------------------------------------------------------------------------- */
@@ -828,8 +838,17 @@ th:last-child {
 	padding-top: 0;
 }
 
+.archive .content,
+.blog .content,
+.search .content {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 .archive article,
-.blog article {
+.blog article,
+.search article {
 	background-color: #ffffff;
 	box-shadow: 0 0px 10px rgba(0,0,0,0.1);
 	margin-bottom: 32px;
@@ -838,23 +857,29 @@ th:last-child {
 .archive article:hover,
 .archive article:focus,
 .blog article:hover,
-.blog article:focus {
+.blog article:focus,
+.search article:hover,
+.search article:focus {
 	transform: translate3d(0, -3px, 0);
 	transition: background-color 0.25s ease-in, border-color ease-in, transform 0.75s cubic-bezier(0.44, 0.51, 0.24, 0.99), box-shadow 1s cubic-bezier(0.44, 0.51, 0.24, 0.99);
 }
 
 .archive article .entry-header,
-.blog article .entry-header {
+.blog article .entry-header,
+.search article .entry-header {
 	margin: 16px;
 }
 
 .archive article .entry-meta,
-.blog article .entry-meta {
+.blog article .entry-meta,
+.search article .entry-meta {
 	margin-bottom: 10px;
 }
 
 .archive article .entry-title,
-.blog article .entry-title {
+.blog article .entry-title,
+.search article .entry-title {
+
 	font-size: 24px;
 	font-family: museo-sans, sans-serif;
 	font-weight: 700;
@@ -1647,6 +1672,8 @@ p.entry-meta {
 .pagination {
 	clear: both;
 	margin: 60px 0;
+	flex: 0 0 100%;
+	text-align: center;
 }
 
 .adjacent-entry-pagination {
@@ -1658,7 +1685,7 @@ p.entry-meta {
 }
 
 .archive-pagination li a {
-	background-color: #f5f5f5;
+	background-color: #ffffff;
 	color: #1b2432;
 	cursor: pointer;
 	display: inline-block;
@@ -1672,8 +1699,8 @@ p.entry-meta {
 .archive-pagination li a:focus,
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #1b2432;
-	color: #fff;
+	background-color: #c6101c;
+	color: #ffffff;
 }
 
 /* Entry Comments
@@ -2332,7 +2359,8 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 		width: 83%;
 	}
 	.blog .content,
-	.archive .content {
+	.archive .content,
+	.search .content {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
