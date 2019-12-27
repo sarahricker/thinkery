@@ -33,7 +33,7 @@ class Archive_Header {
 	 */
 	public function load_block_area() {
 
-		if ( is_singular() || is_404() ) {
+		if ( is_singular() || is_404() || is_archive( 'tribe_events' ) ) {
 			return;
 		}
 
