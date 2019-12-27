@@ -1978,7 +1978,7 @@ span.tribe-events-divider {
 #tribe-events-content a.url:hover,
 #tribe-events-content a.url:hover h3.tribe-events-list-event-title,
 a.tribe-event-url:hover {
-	color: #1b2432 !important;
+	text-decoration: underline;
 }
 .recurring-info-tooltip.tribe-events-tooltip {
 	width: 270px;
