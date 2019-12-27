@@ -2029,6 +2029,96 @@ span.tribe-events-arrow::after {
 	color: #ffffff;
 }
 
+/* Related Events */
+
+.full-width-related-events {
+	background: #e7ecf3;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+.post .tribe-events-single ul.tribe-related-events,
+.tribe-events-single ul.tribe-related-events {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.post .tribe-events-single ul.tribe-related-events,
+	.tribe-events-single ul.tribe-related-events {
+		flex-flow: column;
+	}
+	.tribe-events-single ul.tribe-related-events .tribe-related-events-thumbnail,
+	.tribe-events-single ul.tribe-related-events li .tribe-related-event-info {
+		float: none;
+		width: 100%;
+	}
+	.tribe-events-single ul.tribe-related-events li .tribe-related-event-info {
+		padding: 16px 16px 70px 16px;
+	}
+}
+
+.full-width-related-events .inner {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding-top: calc(60px - 5%);
+	padding-bottom: calc(60px - 5%);
+}
+.post .tribe-events-single ul.tribe-related-events::before,
+.post .tribe-events-single ul.tribe-related-events::after,
+.tribe-events-single ul.tribe-related-events::before,
+.tribe-events-single ul.tribe-related-events::after {
+	display: none;
+}
+.tribe-events-single ul.tribe-related-events li {
+	float: none;
+	background: #ffffff;
+	box-shadow: 0 0px 10px rgba(0,0,0,0.1);
+	border: none;
+	margin-bottom: 32px;
+	padding: 0;
+	font-weight: 700;
+}
+.tribe-events-single ul.tribe-related-events li:first-child {
+	margin-left: 0;
+}
+
+.tribe-events-single ul.tribe-related-events li:hover,
+.tribe-events-single ul.tribe-related-events li:focus {
+	transform: translate3d(0, -3px, 0);
+	transition: background-color 0.25s ease-in, border-color ease-in, transform 0.75s cubic-bezier(0.44, 0.51, 0.24, 0.99), box-shadow 1s cubic-bezier(0.44, 0.51, 0.24, 0.99);
+}
+
+.tribe-events-single ul.tribe-related-events .tribe-related-events-thumbnail img {
+	height: 185px;
+	object-fit: cover;
+}
+
+.tribe-events-single .tribe-block__events-link {
+	margin-bottom: 50px;
+}
+#tribe-events-content.tribe-events-single {
+	margin-bottom: 0;
+	overflow: visible;
+}
+
+.tribe-events-single ul.tribe-related-events .recurringinfo {
+	display: none;
+}
+.tribe-events-single ul.tribe-related-events .tribe-related-events-title {
+	line-height: 1.5;
+	margin: 0 0 10px;
+	font-size: 24px;
+	font-family: museo-sans, sans-serif;
+	font-weight: 700;
+}
+.tribe-related-event-info {
+	padding: 0 10px 70px 0;
+}
+
 /* Next / Previous  Links */
 
 #legend_box {

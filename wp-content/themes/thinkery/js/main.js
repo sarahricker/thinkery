@@ -7,6 +7,18 @@ jQuery(function ($) {
 		$( ".tribe-mini-calendar-list-wrapper" ).fadeIn();
 	} );
 
+	$( document ).ready(function(){
+		// Change default related events image
+		$( '.tribe-related-events-thumbnail img' ).each( function ( index, value ) {
+			if ( ! $( this ).hasClass('wp-post-image') ) {
+				$( this ).attr('src', document.location.origin + '/wp-content/themes/thinkery/images/default-thinkery.jpg');
+			};
+		} );
+	} );
+
+	// Wrap related events to style full width
+	$( ".tribe-block__related-events__title, .tribe-related-events" ).wrapAll( "<div class='alignfull full-width-related-events'></div>" ).wrapAll( "<div class='inner'></div>" );
+
 	/**
 	 * Slideout Search Bar in Header
 	 */
