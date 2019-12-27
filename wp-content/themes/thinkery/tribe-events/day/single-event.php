@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'tribe_events_after_the_meta' ) ?>
 
 <!-- Event Image -->
-<?php echo tribe_event_featured_image( null, 'medium' ); ?>
+<?php // echo tribe_event_featured_image( null, 'medium' ); ?>
 
 <!-- Event Content -->
 <?php do_action( 'tribe_events_before_the_content' ) ?>
