@@ -1944,15 +1944,23 @@ p.entry-meta {
 /* Recurring Event Info */
 
 span.tribe-events-divider {
-	padding: 0 10px;
+	display: none;
 }
 #tribe-events-content .event-is-recurring,
 #tribe-events-content .event-is-recurring:hover {
 	color: #ffffff;
 	font-weight: 700;
+	display: flex;
+	margin-top: 5px;
+	align-items: center;
 }
-.tribe-events-list.tribe-events-day a.url {
-	display: inline-block;
+.tribe-events-list.tribe-events-day a.url,
+.tribe-events-list .tribe-events-loop .tribe-events-event-meta .recurringinfo {
+	display: block;
+}
+
+.tribe-events-list .time-details {
+	margin: 5px 0 8px;
 }
 
 #tribe-events-content .event-is-recurring a:not(.url) {
@@ -1967,8 +1975,10 @@ span.tribe-events-divider {
 	background-color: #1b2432;
 	color: #ffffff;
 }
-#tribe-events-content a:hover {
-	color: #1b2432;
+#tribe-events-content a.url:hover,
+#tribe-events-content a.url:hover h3.tribe-events-list-event-title,
+a.tribe-event-url:hover {
+	color: #1b2432 !important;
 }
 .recurring-info-tooltip.tribe-events-tooltip {
 	width: 270px;
@@ -2514,6 +2524,7 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 		text-align: left;
 	}
 }
+
 
 /* Print Styles
 ---------------------------------------------------------------------------- */
