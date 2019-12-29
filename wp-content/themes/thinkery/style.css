@@ -2479,6 +2479,11 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 .tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-mini-calendar-today {
 	background-color: #c6101c;
 }
+.tribe-mini-calendar-wrapper .tribe-events-present .tribe-mini-calendar-no-event,
+.tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-mini-calendar-today .tribe-mini-calendar-no-event {
+	color: #ffffff;
+	font-weight: 700;
+}
 
 .tribe-mini-calendar-wrapper .tribe-mini-calendar .tribe-events-has-events div[id*=daynum-] a:before {
 	display: none;
