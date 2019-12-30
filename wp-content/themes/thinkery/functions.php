@@ -620,8 +620,13 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
 	}
 	if ( is_tax( $tribe_ecp->get_event_taxonomy() ) && $depth ) {
 		$cat = get_queried_object();
-		$title = '<a href="' . esc_url( tribe_get_events_link() ) . '">' . $title . '</a>';
-		$title .= ' &#8250; ' . $cat->name;
+		$cat = ' ' . $cat->name;
+		$title = substr_replace(
+			$title,
+			$cat,
+			strpos( $title, '<span' ),
+			0
+		);
 	}
 	return $title;
 }
