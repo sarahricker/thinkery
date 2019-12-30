@@ -2556,6 +2556,42 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 	display: none;
 }
 
+
+/* Single Events */
+
+.tribe-events-schedule__all-day,
+.tribe-events-schedule__separator,
+.tribe-events-schedule__timezone {
+	color: #c6101c;
+	font-weight: 700;
+}
+
+.tribe-block__events-link .tribe-block__btn--link a {
+	background: #c6101c;
+	border: none;
+	color: #ffffff;
+	transform: translate3d(0, 0, 0);
+	transition: background-color 0.25s ease-in, border-color ease-in, transform 0.75s cubic-bezier(0.44, 0.51, 0.24, 0.99), box-shadow 1s cubic-bezier(0.44, 0.51, 0.24, 0.99);
+}
+.tribe-block__events-link .tribe-block__btn--link a:hover {
+	transform: translate3d(0, -3px, 0);
+}
+
+.tribe-block__events-link .tribe-block__btn--link img {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.single-tribe_events .tribe-events-schedule {
+		background: none;
+		border: none;
+		margin: 0 0 20px;
+		padding: 0px;
+	}
+}
+
+
+
 /* Media Queries
 ---------------------------------------------------------------------------- */
 
