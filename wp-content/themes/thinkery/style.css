@@ -231,21 +231,21 @@ h4,
 h5,
 h6 {
 	font-family: museo-sans, sans-serif;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.2;
 	margin: 0 0 20px;
 }
 
 h1, .is-style-h1 {
-	font-size: 64px;
+	font-size: 48px;
 }
 
 h2,.is-style-h2 {
-	font-size: 40px;
+	font-size: 30px;
 }
 
 h3, .is-style-h3 {
-	font-size: 30px;
+	font-size: 22.5px;
 }
 
 h4, .is-style-h4 {
@@ -259,6 +259,7 @@ h5, .is-style-h5 {
 h6, .is-style-h6 {
 	font-size: 16px;
 }
+
 
 /* Objects
 --------------------------------------------- */
@@ -406,7 +407,7 @@ input[type="submit"],
 	color: #fff;
 	cursor: pointer;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 	padding: 20px;
 	text-align: center;
 	text-decoration: none;
@@ -488,7 +489,7 @@ td {
 }
 
 th {
-	font-weight: 600;
+	font-weight: 700;
 	padding: 0 10px 10px;
 }
 
@@ -808,7 +809,7 @@ th:last-child {
 .archive-title,
 .author-box-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 20px;
 }
 
@@ -830,7 +831,7 @@ th:last-child {
 
 .widget-title {
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 20px;
 }
 
@@ -945,7 +946,7 @@ img.alignright,
 .gallery-caption,
 .wp-caption-text {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 700;
 	margin: 0;
 	text-align: center;
 }
@@ -1224,7 +1225,7 @@ img.alignright,
 
 .site-title {
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -1271,7 +1272,7 @@ img.alignright,
 	display: block;
 	font-size: 16px;
 	font-family: museo-sans, sans-serif;
-	font-weight: 600;
+	font-weight: 700;
 	outline-offset: -1px;
 	padding-bottom: 12px;
 	padding-top: 12px;
@@ -1501,7 +1502,7 @@ img.alignright,
 }
 .side-menu ul.menu li a {
 	color: #ffffff;
-	font-weight: 600;
+	font-weight: 700;
 	text-decoration: none;
 	padding: 20px;
 	display: block;
@@ -1690,7 +1691,7 @@ p.entry-meta {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 4px;
 	padding: 8px 12px;
 	text-decoration: none;
@@ -1881,7 +1882,7 @@ p.entry-meta {
 }
 .tribe-events-page-title {
 	font-size: 40px;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: left;
 }
 .tribe-events-day .tribe-events-event-meta {
@@ -2682,6 +2683,30 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 
 @media only screen and (min-width: 1000px) {
 
+	h1, .is-style-h1 {
+		font-size: 64px;
+	}
+
+	h2,.is-style-h2 {
+		font-size: 40px;
+	}
+
+	h3, .is-style-h3 {
+		font-size: 30px;
+	}
+
+	h4, .is-style-h4 {
+		font-size: 20px;
+	}
+
+	h5, .is-style-h5 {
+		font-size: 18px;
+	}
+
+	h6, .is-style-h6 {
+		font-size: 16px;
+	}
+
 	/* Site Header
 	--------------------------------------------- */
 
@@ -2724,7 +2749,7 @@ a.tribe-mini-calendar-nav-link.next-month span::before {
 		background-color: #1b2432;
 		border-radius: 3px;
 		color: #fff;
-		font-weight: 600;
+		font-weight: 700;
 		margin-left: 15px;
 		padding-left: 20px;
 		padding-right: 20px;
