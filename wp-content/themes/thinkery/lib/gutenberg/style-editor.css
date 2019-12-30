@@ -402,6 +402,11 @@ hr.wp-block-separator.is-style-dots {
 	border: none;
 }
 
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 120px;
+	height: 8px;
+}
+
 /* Tables
 ---------------------------------------------------------------------------- */
 
@@ -536,6 +541,25 @@ hr.wp-block-separator.is-style-dots {
 }
 .is-style-shift-up-150 [data-block] {
 	margin: 0;
+}
+
+
+/* Background Wave
+--------------------------------------------- */
+
+.bg-wave,
+.bg-wave.light-grey-wave {
+	background-image: url(../../images/Thinkery-WaveShape-900x484_v02-LGrey100.svg);
+	background-repeat: repeat-x;
+	background-position: right top;
+	background-size: cover;
+}
+
+.bg-wave.dark-grey-wave {
+	background-image: url(../../images/Thinkery-WaveShape-900x484_v02-DGrey15.svg);
+}
+.bg-wave.white-wave {
+	background-image: url(../../images/Thinkery-WaveShape-900x484_v02-White15.svg);
 }
 
 /* CO Blocks
