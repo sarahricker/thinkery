@@ -1099,7 +1099,6 @@ img.alignright,
 .site-header {
 	background-color: #c6101c;
 	padding: 15px 5%;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 .site-header .wrap {
 	display: flex;

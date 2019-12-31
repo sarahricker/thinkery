@@ -26,3 +26,7 @@ wp.blocks.registerBlockStyle( 'core/group', {
     name: 'shift-up-150',
     label: 'Shift embed up (-150px)'
 } );
+wp.blocks.registerBlockStyle( 'core/media-text', {
+    name: 'stylized-background',
+    label: 'Stylized Background'
+} );
