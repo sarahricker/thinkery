@@ -221,6 +221,10 @@ blockquote {
 	margin: 30px;
 }
 
+.program-buttons {
+	test-align: center;
+}
+
 /* Headings
 --------------------------------------------- */
 
