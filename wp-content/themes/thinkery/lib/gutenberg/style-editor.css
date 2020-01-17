@@ -352,12 +352,29 @@ p.has-background.light-text a:hover {
 	content: counter(counter) ". ";
 	color: #c6101c;
 	font-weight: bold;
+	margin-left: -20px;
+	padding-right: 2px;
 }
 
+.editor-block-list__block ol ol,
+.editor-block-list__block ol.is-style-default ol  {
+	padding-left: 34px;
+ }
 .editor-block-list__block ol ol li::before,
 .editor-block-list__block ol.is-style-default ol li::before {
 	content: counters(counter, ".") " ";
+	margin-left: -34px;
 }
+
+.editor-block-list__block ol ol ol,
+.editor-block-list__block ol.is-style-default ol ol {
+	padding-left: 54px;
+ }
+.editor-block-list__block ol ol ol li::before,
+.editor-block-list__block ol.is-style-default ol ol li:before {
+	margin-left: -54px;
+}
+
 
 .editor-block-list__block ul li:before,
 .editor-block-list__block ul.is-style-default li:before {

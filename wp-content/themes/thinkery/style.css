@@ -1594,10 +1594,23 @@ img.alignright,
 	content: counter(counter) ". ";
 	color: #c6101c;
 	font-weight: bold;
+	margin-left: -20px;
+	padding-right: 2px;
+}
+.entry-content ol ol {
+	padding-left: 34px;
 }
 .entry-content ol ol li::before {
 	content: counters(counter, ".") " ";
+	margin-left: -34px;
 }
+.entry-content ol ol ol {
+	padding-left: 54px;
+}
+.entry-content ol ol ol li::before {
+	margin-left: -54px;
+}
+
 .entry-content ul li:before {
 	color: #c6101c;
 	content: "\2022";
