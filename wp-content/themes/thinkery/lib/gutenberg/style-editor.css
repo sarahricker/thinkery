@@ -371,12 +371,17 @@ p.has-background.light-text a:hover {
 .editor-block-list__block ul ul > li:before,
 .editor-block-list__block ul.is-style-default ul > li:before {
 	content: "\26AC";
+	font-size: 11px;
+	position: absolute;
+	top: 7px;
+	left: 5px;
 }
 .editor-block-list__block ol ul > li,
 .editor-block-list__block ol.is-style-default ul > li,
 .editor-block-list__block ul ul > li,
 .editor-block-list__block ul.is-style-default ul > li {
 	list-style-type: none;
+	position: relative;
 }
 
 .editor-block-list__block ol.is-style-none li:before,

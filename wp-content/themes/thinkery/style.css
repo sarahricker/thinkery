@@ -1608,10 +1608,15 @@ img.alignright,
 }
 .entry-content ul ul > li:before {
 	content: "\26AC";
+	font-size: 11px;
+	position: absolute;
+	top: 7px;
+	left: 5px;
 }
 .entry-content ol ul > li,
 .entry-content ul ul > li {
 	list-style-type: none;
+	position: relative;
 }
 
 .entry-content ol ol,
