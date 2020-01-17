@@ -335,10 +335,10 @@ body .site-container .wp-block-button.w-100 .wp-block-button__link {
 }
 
 @media (min-width: 1000px) {
-.wp-block-media-text.is-style-stylized-background {
-	margin-right: -15%;
+	.wp-block-media-text.is-style-stylized-background {
+		margin-right: -15%;
+	}
 }
-
 
 /* Blockquotes and captions
 --------------------------------------------- */
@@ -724,6 +724,9 @@ ol.flickity-page-dots li::before,
 }
 .uagb-post__image:before {
 	mix-blend-mode: multiply;
+}
+ul.slick-dots {
+	padding-left: 0;
 }
 ul.slick-dots li:before {
 	display: none;
