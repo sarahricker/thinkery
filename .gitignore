@@ -109,7 +109,7 @@ wp-content/themes/genesis
 #/wp-content/uploads/backup*
 #/wp-content/temp*
 #log.txt
-#debug.log
+debug.log
 #/wp-content/plugins/plugins
 #.a
 #w3tc/dbcache
