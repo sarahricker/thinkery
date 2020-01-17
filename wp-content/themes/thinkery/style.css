@@ -5,7 +5,7 @@ Description: This is a child theme based on the Genesis Sample theme created for
 Author: StudioPress
 Author URI: https://www.studiopress.com/
 
-Version: 3.1.0
+Version: 3.1.1
 
 Tags: accessibility-ready, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -1995,6 +1995,13 @@ a.tribe-event-url:hover {
 	right: 0;
 	width: 22px;
 	margin: 0 auto;
+}
+.tribe-events-tooltip .tribe-event-link p {
+	margin-bottom: 0;
+}
+.tribe-events-tooltip .tribe-event-link a {
+	padding: 8px 16px;
+	border-radius: 99em;
 }
 span.tribe-events-arrow::after {
 	content: '';
