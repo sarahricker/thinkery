@@ -1603,7 +1603,8 @@ img.alignright,
 	content: "\2022";
 	font-weight: bold;
 	display: inline-block;
-	padding-right: 10px;
+	margin-left: -20px;
+	padding-right: 12px;
 }
 .entry-content ul ul > li:before {
 	content: "\26AC";

@@ -365,7 +365,8 @@ p.has-background.light-text a:hover {
 	content: "\2022";
 	font-weight: bold;
 	display: inline-block;
-	padding-right: 10px;
+	margin-left: -20px;
+	padding-right: 12px;
 }
 .editor-block-list__block ul ul > li:before,
 .editor-block-list__block ul.is-style-default ul > li:before {
