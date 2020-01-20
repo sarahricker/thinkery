@@ -2067,7 +2067,7 @@ span.tribe-events-arrow::after {
 
 @media (max-width: 768px) {
 
-	.tribe-events-day .tribe-events-event-meta {
+	.tribe-events-shortcode .tribe-events-day .tribe-events-event-meta {
 		background: transparent;
 		border: none;
 	}
