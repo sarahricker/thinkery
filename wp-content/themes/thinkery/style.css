@@ -2066,6 +2066,12 @@ span.tribe-events-arrow::after {
 }
 
 @media (max-width: 768px) {
+
+	.tribe-events-day .tribe-events-event-meta {
+		background: transparent;
+		border: none;
+	}
+
 	.post .tribe-events-single ul.tribe-related-events,
 	.tribe-events-single ul.tribe-related-events {
 		flex-flow: column;
