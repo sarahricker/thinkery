@@ -1455,7 +1455,7 @@ img.alignright,
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 0;
+	z-index: 2;
 	background: #c6101c;
 }
 .side-menu .wrap {
