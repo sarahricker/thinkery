@@ -275,6 +275,16 @@ function thinkery_default_image_fallback($output, $args) {
 }
 add_filter('genesis_get_image', 'thinkery_default_image_fallback', 10, 2);
 
+/*
+ * Remove Post Info, Post Meta from /exhibit Archive Pages
+ */
+add_filter( 'genesis_post_info', 'remove_archive_cpt_post_info' );
+function remove_archive_cpt_post_info($post_info) {
+if ( is_post_type_archive('exhibit') ) :
+	$post_info = '[post_comments] [post_edit]';
+	return $post_info;
+	endif;
+}
 
 /**
  * Add custom body class to the head
@@ -641,12 +651,3 @@ $file_types = array_merge($file_types, $new_filetypes );
 return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
-
-// Remove Post Info, Post Meta from /exhibit Archive Pages
-add_filter( 'genesis_post_info', 'remove_archive_cpt_post_info' );
-function remove_archive_cpt_post_info($post_info) {
-if ( is_post_type_archive('exhibit') ) :
-	$post_info = '[post_comments] [post_edit]';
-	return $post_info;
-	endif;
-}
