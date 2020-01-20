@@ -632,6 +632,18 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
 }
 add_filter( 'tribe_get_events_title', 'tribe_alter_event_archive_titles', 11, 2 );
 
+// Remove Recurring Event Label + Tooltip
+function thinkery_hide_event_recurrence_tooltip( $tooltip ) {
+
+	if ( empty( $post_id ) ) {
+		$post_id = get_the_ID();
+	}
+	$tooltip = '';
+
+	return $tooltip;
+}
+add_filter( 'tribe_events_recurrence_tooltip', 'thinkery_hide_event_recurrence_tooltip' );
+
 
 //Added to allow SVG upload to Media Library
 function add_file_types_to_uploads($file_types){
