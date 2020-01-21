@@ -280,9 +280,9 @@ add_filter('genesis_get_image', 'thinkery_default_image_fallback', 10, 2);
  */
 add_filter( 'genesis_post_info', 'remove_archive_cpt_post_info' );
 function remove_archive_cpt_post_info($post_info) {
-if ( is_post_type_archive('exhibit') ) :
-	$post_info = '[post_comments] [post_edit]';
-	return $post_info;
+	if ( is_post_type_archive('exhibit') ) :
+		$post_info = '[post_comments] [post_edit]';
+		return $post_info;
 	endif;
 }
 
