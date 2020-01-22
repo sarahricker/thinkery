@@ -469,7 +469,7 @@ function thinkery_custom_side_menu() { ?>
 		<div class="wrap">
 			<div class="side-menu-header">
 				<div class="logo">
-					<a href="/sites/"><img src="<?php echo esc_url( CHILD_URL . '/images/logo-thinkery-bug.png' ); ?>" alt="Thinkery" /></a>
+					<a href="<?php echo bloginfo( 'url' ); ?>"><img src="<?php echo esc_url( CHILD_URL . '/images/logo-thinkery-bug.png' ); ?>" alt="Thinkery" /></a>
 				</div>
 				<button class="close-icon">
 					<i class="fas fa-times"></i> Close
