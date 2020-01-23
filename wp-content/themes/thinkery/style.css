@@ -2347,6 +2347,16 @@ ul.tribe-events-sub-nav li.tribe-events-nav-previous {
 	padding: 10px 16px 20px;
 }
 
+.tribe-events-tooltip .tribe-event-duration {
+	padding-bottom: 10px;
+}
+.tribe-events-tooltip .tribe-event-description p {
+	margin-bottom: 0;
+}
+.tribe-events-tooltip .tribe-event-link {
+	padding-top: 30px;
+}
+
 #tribe-events .tribe-events-button, .tribe-events-button {
 	background-color: #c6101c;
 	border-radius: 0;
