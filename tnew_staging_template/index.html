@@ -69,9 +69,14 @@
 	<link rel='dns-prefetch' href='//s.w.org' />
 	<link rel="alternate" type="text/calendar" title="Thinkery &raquo; iCal Feed"
 		href="https://thinkeryaustin.org/calendar/?ical=1" />
-	<link rel='stylesheet' id='thinkery-css'
-		href='https://thinkeryaustin.org/wp-content/themes/thinkery/style.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='thinkery-css' href='https://thinkeryaustin.org/wp-content/themes/thinkery/style.css'
+		type='text/css' media='all' />
 	<style id='thinkery-inline-css' type='text/css'>
+		.title-area p {
+			position: absolute;
+			left: -9999em;
+		}
+
 		a,
 		.entry-title a:focus,
 		.entry-title a:hover {
@@ -101,6 +106,7 @@
 		}
 
 		@media only screen and (min-width: 960px) {
+
 			.genesis-nav-menu>.menu-highlight>a:hover,
 			.genesis-nav-menu>.menu-highlight>a:focus,
 			.genesis-nav-menu>.menu-highlight.current-menu-item>a {
@@ -116,9 +122,16 @@
 		.site-header {
 			background-color: #c6101c;
 		}
+
+		.tn-subnav-component .tn-promo-box input#tn-subnav-promo-code {
+			border: 1px solid #ddd;
+		}
 	</style>
-	<link rel='stylesheet' id='op_css-css' href='https://thinkeryaustin.org/wp-content/plugins/wp-opening-hours/dist/styles/main.css?ver=5.3.2' type='text/css' media='all' />
-	<link rel='stylesheet' id='thinkery-fonts-css' href='https://use.typekit.net/kkn7rhy.css?ver=3.1.0' type='text/css' media='all' />
+	<link rel='stylesheet' id='op_css-css'
+		href='https://thinkeryaustin.org/wp-content/plugins/wp-opening-hours/dist/styles/main.css?ver=5.3.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='thinkery-fonts-css' href='https://use.typekit.net/kkn7rhy.css?ver=3.1.0' type='text/css'
+		media='all' />
 	<link rel="icon" href="https://thinkeryaustin.org/wp-content/uploads/favicon.ico" sizes="32x32" />
 	<link rel="icon" href="https://thinkeryaustin.org/wp-content/uploads/favicon.ico" sizes="192x192" />
 	<link rel="apple-touch-icon-precomposed" href="https://thinkeryaustin.org/wp-content/uploads/favicon.ico" />
@@ -130,15 +143,23 @@
 		<div class="wrap">
 			<div class="side-menu-header">
 				<div class="logo">
-					<a href="/sites/"><img src="https://thinkeryaustin.org/wp-content/themes/thinkery/images/logo-thinkery-bug.png" alt="Thinkery" /></a>
+					<a href="/sites/"><img
+							src="https://thinkeryaustin.org/wp-content/themes/thinkery/images/logo-thinkery-bug.png"
+							alt="Thinkery" /></a>
 				</div>
 				<button class="close-icon"><i class="fa fa-times"></i> Close</button>
 			</div>
 			<div class="menu-mobile-menu-container">
 				<ul id="menu-mobile-menu" class="menu">
-					<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="https://thinkeryaustin.org/explore/">Explore</a></li>
-					<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="https://thinkeryaustin.org/support-us/">Support</a></li>
-					<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="https://thinkeryaustin.org/about/">About</a></li>
+					<li id="menu-item-176"
+						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a
+							href="https://thinkeryaustin.org/explore/">Explore</a></li>
+					<li id="menu-item-179"
+						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a
+							href="https://thinkeryaustin.org/support-us/">Support</a></li>
+					<li id="menu-item-178"
+						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a
+							href="https://thinkeryaustin.org/about/">About</a></li>
 				</ul>
 			</div>
 			<form class="search-form" method="get" action="https://thinkeryaustin.org/" role="search">
@@ -163,9 +184,6 @@
 					<div class="phone">
 						<i class="fa fa-phone"></i><a href="tel:512-469-6200">512-469-6200</a>
 					</div>
-					<div id="google_translate_element" aria-label="google translate languages" class="translate">
-						<i class="fa fa-globe"></i>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -173,13 +191,11 @@
 			<div class="wrap">
 				<div class="title-area">
 					<a href="https://thinkeryaustin.org/" class="custom-logo-link" rel="home">
-						<img
-							width="500" height="131"
+						<img width="500" height="131"
 							src="https://thinkeryaustin.org/wp-content/uploads/logo-thinkery.png" class="custom-logo"
 							alt="Thinkery"
 							srcset="https://thinkeryaustin.org/wp-content/uploads/logo-thinkery.png 500w, https://thinkeryaustin.org/wp-content/uploads/logo-thinkery-300x79.png 300w"
-							sizes="(max-width: 500px) 100vw, 500px"
-						/>
+							sizes="(max-width: 500px) 100vw, 500px" />
 					</a>
 					<p class="site-title">Thinkery</p>
 					<p class="site-description">A place where science and families play side by side.</p>
@@ -190,90 +206,108 @@
 				<nav class="nav-primary" aria-label="Main" id="genesis-nav-primary">
 					<div class="wrap">
 						<ul id="menu-primary-navigation" class="menu genesis-nav-menu menu-primary js-superfish">
-							<li id="menu-item-36560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-36560">
+							<li id="menu-item-36560"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-36560">
 								<a href="https://thinkeryaustin.org/visit-us/"><span>Visit Us</span></a>
 								<ul class="sub-menu">
-									<li id="menu-item-35407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35407">
-										<a href="https://thinkeryaustin.org/visit-us/#hours"><span>Hours</span></a>
+									<li id="menu-item-35407"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35407">
+										<a href="https://thinkeryaustin.org/visit-us/#hours"><span>Hours</span></a></li>
+									<li id="menu-item-35408"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35408">
+										<a
+											href="https://thinkeryaustin.org/visit-us/#location"><span>Location</span></a>
 									</li>
-									<li id="menu-item-35408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35408">
-										<a href="https://thinkeryaustin.org/visit-us/#location"><span>Location</span></a>
-									</li>
-									<li id="menu-item-35409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35409">
+									<li id="menu-item-35409"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35409">
 										<a href="https://thinkeryaustin.org/visit-us/#parking"><span>Parking</span></a>
 									</li>
-									<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203">
-										<a title="https://thinkeryaustin.org/membership" href="https://thinkeryaustin.org/membership/"><span>Memberships</span></a>
+									<li id="menu-item-37529"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37529">
+										<a href="https://my.thinkeryaustin.org/calendar"><span>Buy Tickets</span></a>
 									</li>
+									<li id="menu-item-203"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203">
+										<a title="https://thinkeryaustin.org/membership"
+											href="https://thinkeryaustin.org/membership/"><span>Become a
+												Member</span></a></li>
 								</ul>
 							</li>
-							<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-107">
+							<li id="menu-item-107"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-107">
 								<a href="https://thinkeryaustin.org/explore/"><span>Explore</span></a>
 								<ul class="sub-menu">
-									<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
-										<a href="https://thinkeryaustin.org/exhibits/"><span>Exhibits</span></a>
-									</li>
-									<li id="menu-item-36577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36577">
-										<a href="https://thinkeryaustin.org/programs/"><span>Programs</span></a>
-									</li>
+									<li id="menu-item-36707"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36707">
+										<a href="https://thinkeryaustin.org/exhibit"><span>Exhibits</span></a></li>
+									<li id="menu-item-36577"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36577">
+										<a href="https://thinkeryaustin.org/programs/"><span>Programs</span></a></li>
 									<li id="menu-item-138"
 										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138">
-										<a href="https://thinkeryaustin.org/calendar/"><span>Calendar</span></a>
-									</li>
-									<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137">
-										<a href="https://thinkeryaustin.org/blog/"><span>Blog</span></a>
-									</li>
-									<li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206">
-										<a href="https://thinkeryaustin.org/parties-events/"><span>Parties &#038; Events</span></a>
-									</li>
+										<a href="https://thinkeryaustin.org/calendar/"><span>Calendar</span></a></li>
+									<li id="menu-item-37530"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37530">
+										<a href="https://thinkeryaustin.org/camp/"><span>Camps</span></a></li>
+									<li id="menu-item-36710"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36710">
+										<a href="https://thinkeryaustin.org/program/birthday-parties/"><span>Birthday
+												Parties</span></a></li>
+									<li id="menu-item-36704"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36704">
+										<a href="https://thinkeryaustin.org/events-rentals/"><span>Event
+												Rentals</span></a></li>
 								</ul>
 							</li>
-							<li id="menu-item-175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-175">
+							<li id="menu-item-175"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-175">
 								<a href="https://thinkeryaustin.org/support-us/"><span>Support</span></a>
 								<ul class="sub-menu">
-									<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142">
-										<a href="https://thinkeryaustin.org/donate/"><span>Donate</span></a>
-									</li>
-									<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
-										<a href="https://thinkeryaustin.org/corporate-partnership/"><span>Corporate Partnership</span></a>
-									</li>
-									<li id="menu-item-199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-199">
-										<a href="https://thinkeryaustin.org/volunteer/"><span>Volunteer</span></a>
-									</li>
+									<li id="menu-item-142"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142">
+										<a href="https://thinkeryaustin.org/donate/"><span>Donate</span></a></li>
+									<li id="menu-item-141"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
+										<a href="https://thinkeryaustin.org/corporate-partnership/"><span>Corporate
+												Partnership</span></a></li>
+									<li id="menu-item-199"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-199">
+										<a href="https://thinkeryaustin.org/volunteer/"><span>Volunteer</span></a></li>
 								</ul>
 							</li>
-							<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-106">
+							<li id="menu-item-106"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-106">
 								<a href="https://thinkeryaustin.org/about/"><span>About</span></a>
 								<ul class="sub-menu">
-									<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
-										<a href="https://thinkeryaustin.org/history/"><span>History</span></a>
-									</li>
-									<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139">
-										<a href="https://thinkeryaustin.org/careers/"><span>Careers</span></a>
-									</li>
-									<li id="menu-item-196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196">
-										<a href="https://thinkeryaustin.org/the-team/"><span>The Team</span></a>
-									</li>
-									<li id="menu-item-194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194">
-										<a href="https://thinkeryaustin.org/press-kit/" aria-current="page"><span>Press Kit</span></a>
-									</li>
+									<li id="menu-item-198"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198">
+										<a href="https://thinkeryaustin.org/history/"><span>History</span></a></li>
+									<li id="menu-item-196"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196">
+										<a href="https://thinkeryaustin.org/the-team/"><span>The Team</span></a></li>
+									<li id="menu-item-139"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139">
+										<a href="https://thinkeryaustin.org/careers/"><span>Careers</span></a></li>
+									<li id="menu-item-137"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137">
+										<a href="https://thinkeryaustin.org/blog/"><span>Blog</span></a></li>
+									<li id="menu-item-194"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194">
+										<a href="https://thinkeryaustin.org/press-kit/"><span>Press Kit</span></a></li>
 								</ul>
 							</li>
-							<li id="menu-item-195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-195">
+							<li id="menu-item-195"
+								class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-195">
 								<a href="https://thinkeryaustin.org/educators/"><span>Educators</span></a>
 								<ul class="sub-menu">
-									<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
-										<a href="https://thinkeryaustin.org/professional-development/"><span>Professional Development</span></a>
-									</li>
-									<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140">
-										<a href="https://thinkeryaustin.org/co-teaching-programs/"><span>Co-Teaching Programs</span></a>
-									</li>
-									<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204">
+									<li id="menu-item-204"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204">
 										<a href="https://thinkeryaustin.org/field-trips/"><span>Field Trips</span></a>
 									</li>
-									<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205">
-										<a href="https://thinkeryaustin.org/teaching-materials/"><span>Teaching Materials</span></a>
-									</li>
+									<li id="menu-item-197"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197">
+										<a href="https://thinkeryaustin.org/professional-development/"><span>Professional
+												Development</span></a></li>
 								</ul>
 							</li>
 						</ul>
@@ -315,8 +349,7 @@
 									<a href="https://thinkeryaustin.org">
 										<img class="alignnone size-medium wp-image-8"
 											src="https://thinkeryaustin.org/wp-content/uploads/logo-thinkery.png"
-											alt="Thinkery" width="300" height="79"
-										>
+											alt="Thinkery" width="300" height="79">
 									</a><br>
 									1830 Simond Ave<br>
 									Austin, Texas 78723
@@ -326,11 +359,16 @@
 									<a href="mailto:info@thinkeryaustin.org">info@thinkeryaustin.org</a>
 								</p>
 								<div class="social-icons">
-									<a target="_blank" href="https://twitter.com/Thinkeryatx" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
-									<a target="_blank" href="http://facebook.com/TheThinkery" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
-									<a target="_blank" href="http://www.pinterest.com/ThinkeryATX/" rel="noopener noreferrer"><i class="fa fa-pinterest"></i></a>
-									<a target="_blank" href="http://www.youtube.com/user/thinkeryaustin/" rel="noopener noreferrer"><i class="fa fa-youtube"></i></a>
-									<a target="_blank" href="http://www.instagram.com/thinkeryatx/" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+									<a target="_blank" href="https://twitter.com/Thinkeryatx"
+										rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+									<a target="_blank" href="http://facebook.com/TheThinkery"
+										rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+									<a target="_blank" href="http://www.pinterest.com/ThinkeryATX/"
+										rel="noopener noreferrer"><i class="fa fa-pinterest"></i></a>
+									<a target="_blank" href="http://www.youtube.com/user/thinkeryaustin/"
+										rel="noopener noreferrer"><i class="fa fa-youtube"></i></a>
+									<a target="_blank" href="http://www.instagram.com/thinkeryatx/"
+										rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
 								</div>
 							</div>
 						</div>
@@ -341,10 +379,12 @@
 						<div class="widget-wrap">
 							<div class="menu-footer-menu-explore-container">
 								<ul id="menu-footer-menu-explore" class="menu">
-									<li id="menu-item-35400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35400">
+									<li id="menu-item-35400"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35400">
 										<a href="https://thinkeryaustin.org/explore/">Explore</a>
 										<ul class="sub-menu">
-											<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186">
+											<li id="menu-item-186"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186">
 												<a href="https://thinkeryaustin.org/tickets/">Tickets</a>
 											</li>
 										</ul>
@@ -359,13 +399,16 @@
 						<div class="widget-wrap">
 							<div class="menu-footer-menu-visit-container">
 								<ul id="menu-footer-menu-visit" class="menu">
-									<li id="menu-item-34321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34321">
+									<li id="menu-item-34321"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34321">
 										<a href="https://thinkeryaustin.org/exhibits/">Exhibits</a>
 									</li>
-									<li id="menu-item-34320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34320">
+									<li id="menu-item-34320"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34320">
 										<a href="https://thinkeryaustin.org/calendar/">Calendar</a>
 									</li>
-									<li id="menu-item-34319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34319">
+									<li id="menu-item-34319"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34319">
 										<a href="https://thinkeryaustin.org/blog/">Blog</a>
 									</li>
 								</ul>
@@ -378,16 +421,21 @@
 						<div class="widget-wrap">
 							<div class="menu-footer-menu-support-container">
 								<ul id="menu-footer-menu-support" class="menu">
-									<li id="menu-item-35401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35401">
+									<li id="menu-item-35401"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35401">
 										<a href="https://thinkeryaustin.org/support-us/">Support Us</a>
 										<ul class="sub-menu">
-											<li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-187">
+											<li id="menu-item-187"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-187">
 												<a href="https://thinkeryaustin.org/donate/">Donate</a>
 											</li>
-											<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188">
-												<a href="https://thinkeryaustin.org/corporate-partnership/">Corporate Partnership</a>
+											<li id="menu-item-188"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188">
+												<a href="https://thinkeryaustin.org/corporate-partnership/">Corporate
+													Partnership</a>
 											</li>
-											<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189">
+											<li id="menu-item-189"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189">
 												<a href="https://thinkeryaustin.org/volunteer/">Volunteer</a>
 											</li>
 										</ul>
@@ -402,20 +450,25 @@
 						<div class="widget-wrap">
 							<div class="menu-footer-menu-about-container">
 								<ul id="menu-footer-menu-about" class="menu">
-									<li id="menu-item-35399" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-35399">
+									<li id="menu-item-35399"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35399">
 										<a href="https://thinkeryaustin.org/about/">About</a>
 										<ul class="sub-menu">
-											<li id="menu-item-180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180">
+											<li id="menu-item-180"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180">
 												<a href="https://thinkeryaustin.org/history/">History</a>
 											</li>
-											<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181">
+											<li id="menu-item-181"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181">
 												<a href="https://thinkeryaustin.org/careers/">Careers</a>
 											</li>
-											<li id="menu-item-182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182">
+											<li id="menu-item-182"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182">
 												<a href="https://thinkeryaustin.org/the-team/">The Team</a>
 											</li>
-											<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-70 current_page_item menu-item-183">
-												<a href="https://thinkeryaustin.org/press-kit/" aria-current="page">Press</a>
+											<li id="menu-item-183"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183">
+												<a href="https://thinkeryaustin.org/press-kit/">Press</a>
 											</li>
 										</ul>
 									</li>
@@ -429,18 +482,29 @@
 		<footer class="site-footer">
 			<div class="wrap">
 				<p>
-					Made with open hearts <span class="dashicons dashicons-heart"></span> by <a href="https://wpengine.com/engine-for-good/open-hearts/" target="_blank">WP Engine</a>.<br />
-					&copy;&nbsp;1983 Thinkery. All Rights Reserved. | <a href="https://thinkeryaustin.org/privacy-policy/">Privacy Policy Terms and Conditions</a>
+					Made with open hearts <span class="dashicons dashicons-heart"></span> by <a
+						href="https://wpengine.com/engine-for-good/open-hearts/" target="_blank">WP Engine</a>.<br />
+					&copy;&nbsp;1983 Thinkery. All Rights Reserved. | <a
+						href="https://thinkeryaustin.org/privacy-policy/">Privacy Policy Terms and Conditions</a>
 				</p>
 			</div>
 		</footer>
 	</div>
-	<script type='text/javascript' src='https://thinkeryaustin.org/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
-	<script type='text/javascript' src='https://thinkeryaustin.org/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
-	<script type='text/javascript' src='https://thinkeryaustin.org/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10'></script>
-	<script type='text/javascript' src='https://thinkeryaustin.org/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=3.1.3'></script>
-	<script type='text/javascript' src='https://thinkeryaustin.org/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=3.1.3'></script>
-	<script type='text/javascript' src='https://thinkeryaustin.org/wp-content/themes/thinkery/js/main.js?ver=5.3.2'></script>
+	<script type='text/javascript' src='https://thinkeryaustin.org/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'>
+	</script>
+	<script type='text/javascript' src='https://thinkeryaustin.org/wp-includes/js/hoverIntent.min.js?ver=1.8.1'>
+	</script>
+	<script type='text/javascript'
+		src='https://thinkeryaustin.org/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10'></script>
+	<script type='text/javascript'
+		src='https://thinkeryaustin.org/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=3.1.3'></script>
+	<script type='text/javascript'
+		src='https://thinkeryaustin.org/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=3.1.3'></script>
+	<script type='text/javascript' src='https://thinkeryaustin.org/wp-content/themes/thinkery/js/main.js?ver=5.3.2'>
+	</script>
+	<script type='text/javascript'
+		src='https://thinkeryaustin.org/wp-content/themes/thinkery/js/vendor/slideout-1.0.1/dist/slideout.min.js?ver=1.0.0'>
+	</script>
 </body>
 
 </html>
