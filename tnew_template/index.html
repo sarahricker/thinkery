@@ -72,6 +72,10 @@
 	<link rel='stylesheet' id='thinkery-css' href='https://thinkeryaustin.org/wp-content/themes/thinkery/style.css'
 		type='text/css' media='all' />
 	<style id='thinkery-inline-css' type='text/css'>
+		.site-inner {
+			padding-bottom: 60px;
+		}
+
 		.title-area p {
 			position: absolute;
 			left: -9999em;
@@ -83,12 +87,17 @@
 			color: #c6101c;
 		}
 
+
 		button,
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"],
 		.button {
 			width: auto;
+		}
+
+		.btn-block {
+			max-width: 250px;
 		}
 
 		button:focus,
@@ -131,17 +140,6 @@
 		#tn-payment-submit-form {
 			margin-top: 20px;
 			width: 160px;
-			margin-bottom: 60px;
-		}
-
-		@media only screen and (min-width: 960px) {
-
-			.genesis-nav-menu>.menu-highlight>a:hover,
-			.genesis-nav-menu>.menu-highlight>a:focus,
-			.genesis-nav-menu>.menu-highlight.current-menu-item>a {
-				background-color: #c6101c;
-				color: #ffffff;
-			}
 		}
 
 		.wp-custom-logo .site-container .title-area {
@@ -155,6 +153,16 @@
 		.tn-subnav-component .tn-promo-box input#tn-subnav-promo-code {
 			border: 1px solid #ddd;
 		}
+
+		@media only screen and (min-width: 960px) {
+			.genesis-nav-menu>.menu-highlight>a:hover,
+			.genesis-nav-menu>.menu-highlight>a:focus,
+			.genesis-nav-menu>.menu-highlight.current-menu-item>a {
+				background-color: #c6101c;
+				color: #ffffff;
+			}
+		}
+
 	</style>
 	<link rel='stylesheet' id='op_css-css'
 		href='https://thinkeryaustin.org/wp-content/plugins/wp-opening-hours/dist/styles/main.css?ver=5.3.2'
